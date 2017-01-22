@@ -84,19 +84,16 @@
 
 
 
-<meta name="description" content="使用hexo搭建博客，如果换了电脑怎么更新博客？如果你有备份源文件那还好，但是每次都要备份感觉太麻烦了。这里介绍一种方法就是使用github分支。一个分支用来存放Hexo生成的网站原始的文件，另一个分支用来存放生成的静态网页。网上也有其他的方法，大家可以去搜一下，自己看看哪种适合自己，我用这种方法一方面我git命令也不太熟，所以想多写写，多学学。
-情形1（本地没有开始搭建博客文件的情形）1.在gi">
+<meta name="description" content="使用hexo搭建博客，如果换了电脑怎么更新博客？如果你有备份源文件那还好，但是每次都要备份感觉太麻烦了。这里介绍一种方法就是使用github分支。一个分支用来存放Hexo生成的网站原始的文件，另一个分支用来存放生成的静态网页。网上也有其他的方法，大家可以去搜一下，自己看看哪种适合自己，我用这种方法一方面我git命令也不太熟，所以想多写写，多学学。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="多台电脑共同管理hexo博客">
 <meta property="og:url" content="http://yoursite.com/2016/02/18/hexo-version-control/index.html">
 <meta property="og:site_name" content="东方飘扬">
-<meta property="og:description" content="使用hexo搭建博客，如果换了电脑怎么更新博客？如果你有备份源文件那还好，但是每次都要备份感觉太麻烦了。这里介绍一种方法就是使用github分支。一个分支用来存放Hexo生成的网站原始的文件，另一个分支用来存放生成的静态网页。网上也有其他的方法，大家可以去搜一下，自己看看哪种适合自己，我用这种方法一方面我git命令也不太熟，所以想多写写，多学学。
-情形1（本地没有开始搭建博客文件的情形）1.在gi">
-<meta property="og:updated_time" content="2017-01-22T12:45:54.611Z">
+<meta property="og:description" content="使用hexo搭建博客，如果换了电脑怎么更新博客？如果你有备份源文件那还好，但是每次都要备份感觉太麻烦了。这里介绍一种方法就是使用github分支。一个分支用来存放Hexo生成的网站原始的文件，另一个分支用来存放生成的静态网页。网上也有其他的方法，大家可以去搜一下，自己看看哪种适合自己，我用这种方法一方面我git命令也不太熟，所以想多写写，多学学。">
+<meta property="og:updated_time" content="2017-01-22T12:51:59.482Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多台电脑共同管理hexo博客">
-<meta name="twitter:description" content="使用hexo搭建博客，如果换了电脑怎么更新博客？如果你有备份源文件那还好，但是每次都要备份感觉太麻烦了。这里介绍一种方法就是使用github分支。一个分支用来存放Hexo生成的网站原始的文件，另一个分支用来存放生成的静态网页。网上也有其他的方法，大家可以去搜一下，自己看看哪种适合自己，我用这种方法一方面我git命令也不太熟，所以想多写写，多学学。
-情形1（本地没有开始搭建博客文件的情形）1.在gi">
+<meta name="twitter:description" content="使用hexo搭建博客，如果换了电脑怎么更新博客？如果你有备份源文件那还好，但是每次都要备份感觉太麻烦了。这里介绍一种方法就是使用github分支。一个分支用来存放Hexo生成的网站原始的文件，另一个分支用来存放生成的静态网页。网上也有其他的方法，大家可以去搜一下，自己看看哪种适合自己，我用这种方法一方面我git命令也不太熟，所以想多写写，多学学。">
 
 
 
@@ -338,7 +335,7 @@
       
 
       
-        <p>使用hexo搭建博客，如果换了电脑怎么更新博客？如果你有备份源文件那还好，但是每次都要备份感觉太麻烦了。<br>这里介绍一种方法就是使用github分支。一个分支用来存放Hexo生成的网站原始的文件，另一个分支用来存放生成的静态网页。<br>网上也有其他的方法，大家可以去搜一下，自己看看哪种适合自己，我用这种方法一方面我git命令也不太熟，所以想多写写，多学学。</p>
+        <p>使用hexo搭建博客，如果换了电脑怎么更新博客？如果你有备份源文件那还好，但是每次都要备份感觉太麻烦了。<br>这里介绍一种方法就是使用github分支。一个分支用来存放Hexo生成的网站原始的文件，另一个分支用来存放生成的静态网页。<br>网上也有其他的方法，大家可以去搜一下，自己看看哪种适合自己，我用这种方法一方面我git命令也不太熟，所以想多写写，多学学。<br><a id="more"></a></p>
 <h2 id="情形1（本地没有开始搭建博客文件的情形）"><a href="#情形1（本地没有开始搭建博客文件的情形）" class="headerlink" title="情形1（本地没有开始搭建博客文件的情形）"></a>情形1（本地没有开始搭建博客文件的情形）</h2><p>1.在github官网上创建一个新的repository（比如命名为dongfangpiaoyang.github.io）<br>2.创建两个分支：master 与 hexo，设置hexo为默认分支（这个分支放博客源文件）<br>3.使用 git clone git@github.com:dongfangpiaoyang（你自己giuhub账号名）/dongfangpiaoyang.github.io（项目名）.git<br>完整写一遍：git clone git@github.com:dongfangpiaoyang/dongfangpiaoyang.github.io.git<br>这样就把项目拷贝到你本地上了</p>
 <p>4.在本地文件夹dongfangpiaoyang.github.io，通过Git bash依次执行以下命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div><div class="line">$ hexo init</div><div class="line">$ npm install</div><div class="line">$ npm install hexo-deployer-git</div><div class="line">$ git init</div><div class="line">$ git checkout -b hexo</div></pre></td></tr></table></figure></p>
 <p>(此时当前分支应显示为hexo)</p>

@@ -340,24 +340,14 @@
 
       
         
-          
-            <p>使用hexo搭建博客，如果换了电脑怎么更新博客？如果你有备份源文件那还好，但是每次都要备份感觉太麻烦了。<br>这里介绍一种方法就是使用github分支。一个分支用来存放Hexo生成的网站原始的文件，另一个分支用来存放生成的静态网页。<br>网上也有其他的方法，大家可以去搜一下，自己看看哪种适合自己，我用这种方法一方面我git命令也不太熟，所以想多写写，多学学。</p>
-<h2 id="情形1（本地没有开始搭建博客文件的情形）"><a href="#情形1（本地没有开始搭建博客文件的情形）" class="headerlink" title="情形1（本地没有开始搭建博客文件的情形）"></a>情形1（本地没有开始搭建博客文件的情形）</h2><p>1.在github官网上创建一个新的repository（比如命名为dongfangpiaoyang.github.io）<br>2.创建两个分支：master 与 hexo，设置hexo为默认分支（这个分支放博客源文件）<br>3.使用 git clone git@github.com:dongfangpiaoyang（你自己giuhub账号名）/dongfangpiaoyang.github.io（项目名）.git<br>完整写一遍：git clone git@github.com:dongfangpiaoyang/dongfangpiaoyang.github.io.git<br>这样就把项目拷贝到你本地上了</p>
-<p>4.在本地文件夹dongfangpiaoyang.github.io，通过Git bash依次执行以下命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div><div class="line">$ hexo init</div><div class="line">$ npm install</div><div class="line">$ npm install hexo-deployer-git</div><div class="line">$ git init</div><div class="line">$ git checkout -b hexo</div></pre></td></tr></table></figure></p>
-<p>(此时当前分支应显示为hexo)</p>
-<p>5.打开站点配置文件(即根目录下的_config.yml)，分支为master<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repository: https://github.com/dongfangpiaoyang/dongfangpiaoyang.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
-<p>6.通过Git bash依次执行以下命令:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ git add .</div><div class="line">$ git commit -m <span class="string">"提交说明"</span></div><div class="line">$ git pull origin hexo</div><div class="line">$ git push origin hexo</div></pre></td></tr></table></figure></p>
-<p>7.执行以下指令即可完成部署:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div><div class="line">$ hexo deploy</div></pre></td></tr></table></figure></p>
-<h2 id="情形2（本地已经搭建博客文件的情形，就是说源文件没有进行版本控制）"><a href="#情形2（本地已经搭建博客文件的情形，就是说源文件没有进行版本控制）" class="headerlink" title="情形2（本地已经搭建博客文件的情形，就是说源文件没有进行版本控制）"></a>情形2（本地已经搭建博客文件的情形，就是说源文件没有进行版本控制）</h2><p>在博客文件夹下边依次输入以下指令(部分指令因为有提示可以自己修改下)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ git init</div><div class="line">$ git checkout -b hexo</div><div class="line">$ git remote add origin git@github.com:dongfangpiaoyang（你自己giuhub账号名）/dongfangpiaoyang.github.io（项目名）.git</div><div class="line">$ git init</div><div class="line">$ git add .</div><div class="line">$ git push origin hexo</div></pre></td></tr></table></figure>
-<p>执行到这里我们就已经把本地的源文件添加到了分支hexo上。<br>部分文件需要自己添加即：<br>$ git add [file]</p>
-<p>扩展：</p>
-<h3 id="github常见操作和常见错误！"><a href="#github常见操作和常见错误！" class="headerlink" title="github常见操作和常见错误！"></a>github常见操作和常见错误！</h3><h4 id="如果输入-git-remote-add-origin-git-github-com-dongfangpiaoyang（github帐号名）-dongfangpiaoyang-github-io（项目名）-git"><a href="#如果输入-git-remote-add-origin-git-github-com-dongfangpiaoyang（github帐号名）-dongfangpiaoyang-github-io（项目名）-git" class="headerlink" title="如果输入$ git remote add origin git@github.com:dongfangpiaoyang（github帐号名）/dongfangpiaoyang.github.io（项目名）.git"></a>如果输入$ git remote add origin git@github.com:dongfangpiaoyang（github帐号名）/dongfangpiaoyang.github.io（项目名）.git</h4><p>提示出错信息：fatal: remote origin already exists.</p>
-<p>解决办法如下：<br>    1、先输入$ git remote rm origin<br>    2、再输入$ git remote add origin git@github.com:dongfangpiaoyang/dongfangpiaoyang.github.io.git 就不会报错了！</p>
-<h4 id="如果输入-git-remote-rm-origin-还是报错的话，"><a href="#如果输入-git-remote-rm-origin-还是报错的话，" class="headerlink" title="如果输入$ git remote rm origin 还是报错的话，"></a>如果输入$ git remote rm origin 还是报错的话，</h4><p>error: Could not remove config section ‘remote.origin’. 我们需要修改gitconfig文件的内容<br>4、找到你的github的安装路径，我的是C:\Users\ASUS\AppData\Local\GitHub\PortableGit_ca477551eeb4aea0e4ae9fcd3358bd96720bb5c8\etc<br>5、找到一个名为gitconfig的文件，打开它把里面的[remote “origin”]那一行删掉就好了！</p>
-<h4 id="如果输入-git-push-origin-master"><a href="#如果输入-git-push-origin-master" class="headerlink" title="如果输入$ git push origin master"></a>如果输入$ git push origin master</h4><p>提示出错信息：error:failed to push som refs to …….<br>解决办法如下：<br>    1、先输入$ git pull origin master //先把远程服务器github上面的文件拉下来<br>    2、再输入$ git push origin master<br>    3、如果出现报错 fatal: Couldn’t find remote ref master或者fatal: ‘origin’ does not appear to be a git repository以及fatal: Could not read from remote repository.<br>    4、则需要重新输入$ git remote add origin git@github.com:dongfangpiaoyang/dongfangpiaoyang.github.io.git</p>
-
-          
+          <p>使用hexo搭建博客，如果换了电脑怎么更新博客？如果你有备份源文件那还好，但是每次都要备份感觉太麻烦了。<br>这里介绍一种方法就是使用github分支。一个分支用来存放Hexo生成的网站原始的文件，另一个分支用来存放生成的静态网页。<br>网上也有其他的方法，大家可以去搜一下，自己看看哪种适合自己，我用这种方法一方面我git命令也不太熟，所以想多写写，多学学。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/02/18/hexo-version-control/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
