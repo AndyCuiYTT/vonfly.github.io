@@ -90,7 +90,7 @@
 <meta property="og:url" content="https://vonfly.github.io/2016/01/22/hello-world/index.html">
 <meta property="og:site_name" content="东方飘扬">
 <meta property="og:description" content="我为什么要搭建个人博客呢，一来有自己的博客会显得高大尚一点，二来也可以当作学习新知识">
-<meta property="og:updated_time" content="2017-01-22T12:45:39.790Z">
+<meta property="og:updated_time" content="2017-02-07T13:20:23.547Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GitHub+Hexo+Next搭建免费独立个人博客">
 <meta name="twitter:description" content="我为什么要搭建个人博客呢，一来有自己的博客会显得高大尚一点，二来也可以当作学习新知识">
@@ -353,7 +353,7 @@
 <p>重申一遍，你只需要做一次这个设置。如果你传递了 –global 选项，因为Git将总是会使用该信息来处理你在系统中所做的一切操作。如果你希望在一个特定的项目中使用不同的名称或e-mail地址，你可以在该项目中运行该命令而不要–global选项。</p>
 <h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>前往<a href="https://nodejs.org/en/download/" target="_blank" rel="external">Node.js官方</a>下载网站，选择适合自己系统的进行下载，下载完成后同样解压安装。（一直下一步即可）</p>
 <h3 id="注册Github账户"><a href="#注册Github账户" class="headerlink" title="注册Github账户"></a>注册Github账户</h3><p>前往Github网站，注册一个新用户。创建一个新的repository</p>
-<p>在自己的Github主页右上角的加号,创建一个新的repository。比如我的Github用户名为dongfangpiaoyang，那么我创建的repository的名字应该是 dongfangpiaoyang.github.io</p>
+<p>在自己的Github主页右上角的加号,创建一个新的repository。比如我的Github用户名为vonfly，那么我创建的repository的名字应该是 vonfly.github.io</p>
 <h3 id="给本机配置SSH-Key"><a href="#给本机配置SSH-Key" class="headerlink" title="给本机配置SSH-Key"></a>给本机配置SSH-Key</h3><p>打开Git Bash，在命令行中输入：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C <span class="string">"your e-mail"</span></div></pre></td></tr></table></figure>
 <p>之后一直回车，就可以了<br>成功之后在命令行中找到这两段<br>Your identification has been saved in /c/Users/XZY-06/.ssh/id_rsa.<br>Your public key has been saved in /c/Users/XZY-06/.ssh/id_rsa.pub.<br>打开所对应的文件夹，找到 id_rsa.pub文件，用编辑器打开，复制其中的全部内容。<br>登陆你的GitHub账户，依次点击账号Settings &gt; SSH and GPG keys &gt; new SSH key，把id_rsa.<br>pub中的内容拷贝进去key项，title项随意填 。</p>
@@ -375,14 +375,14 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
 <h4 id="2-启用Next主题"><a href="#2-启用Next主题" class="headerlink" title="2.启用Next主题"></a>2.启用Next主题</h4><p>下载完成后，打开站点配置文件(即更目录下的_config.yml)，找到theme字段，并将其值更改为 next。<br>再重新执行本地调试那一步骤的命令查看效果即可</p>
 <h3 id="将本地的文件部署（上传）到Github账户中"><a href="#将本地的文件部署（上传）到Github账户中" class="headerlink" title="将本地的文件部署（上传）到Github账户中"></a>将本地的文件部署（上传）到Github账户中</h3><p>打开站点配置文件(即更目录下的_config.yml)，在最后添加如下代码（在你修改时，把 repository更换成之前步骤创建新的repository仓库地址）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repository: https://github.com/dongfangpiaoyang/dongfangpiaoyang.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repository: https://github.com/vonfly/vonfly.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
 <p>执行以下指令即可完成部署（如果提示错误，可以看下面出错原因及解决方法）：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 <p>1.每次修改本地文件，都需要命令$ hexo generate才能保存。而且每次使用命令都必须在myblog根目录下使用。</p>
 <p>2.如果你在执行$ hexo deloy,如果提示 ERROR Deployer not found: git，<br>那说明你没有安装hexo-deployer-git依赖包，进入F:\Hexo\node_modules发现真的没有hexo-deployer-git。<br>解决方法：<br>①只需要输入下面命令创建hexo-deployer-git依赖包</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
 <p>　<br>②然后再执行hexo deploy就能上传成功了<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure></p>
-<p>直接在浏览器访问dongfangpiaoyang.github.io试试</p>
+<p>直接在浏览器访问vonfly.github.io试试</p>
 
       
     </div>
