@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>编程、人生</title>
+  <subtitle>前端 | 后台 | linux</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://vonfly.github.io/"/>
+  <updated>2017-02-18T01:43:42.867Z</updated>
+  <id>https://vonfly.github.io/</id>
+  
+  <author>
+    <name>阿东</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>sublime使用技巧-持续更新</title>
+    <link href="https://vonfly.github.io/2017/02/17/sublime/"/>
+    <id>https://vonfly.github.io/2017/02/17/sublime/</id>
+    <published>2017-02-17T12:33:48.000Z</published>
+    <updated>2017-02-18T01:43:42.867Z</updated>
+    
+    <content type="html"><![CDATA[<p>sublime使用技巧，平时用的时候觉得不错的功能就会把它分享给大家(●’◡’●)<br><a id="more"></a></p>
+<h2 id="sublime右键快捷方式添加"><a href="#sublime右键快捷方式添加" class="headerlink" title="sublime右键快捷方式添加"></a>sublime右键快捷方式添加</h2><p>window下，开始-&gt;运行-&gt;regedit<br>到 HKEY_CLASSES_ROOT*\shell目录下<br>新建sublime(随便你起什么名字)<br>再到新建好的sublime目录下新建command(固定名字)</p>
+<p>最后的目录结构【HKEY_CLASSES_ROOT*\shell\sublime\command】</p>
+<p>第一个双引号是你的软件安装目录<br>“E:\Sublime Text 3  Build 3103 x64 Portable Cracked (2016.02.11)\sublime_text.exe” -p –remote-tab-silent “%1”</p>
+<p>window如何查看软件安装目录，如下图说明：<br><img src="http://olixffhc0.bkt.clouddn.com/sublime2.jpg" alt="window如何查看软件安装目录"></p>
+<p>选中上一步建好的文件command，然后双击右边的默认，把上边的内容复制进去即可。如下图说明<br><img src="http://olixffhc0.bkt.clouddn.com/sublime1.jpg" alt="sublime1"></p>
+<p>随便找个文件sublime能够识别的文件，鼠标右击就可以看到刚刚添加的快捷键了，可以直接打开</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;sublime使用技巧，平时用的时候觉得不错的功能就会把它分享给大家(●’◡’●)&lt;br&gt;
+    
+    </summary>
+    
+      <category term="其它" scheme="https://vonfly.github.io/categories/%E5%85%B6%E5%AE%83/"/>
+    
+    
+      <category term="软件使用技巧" scheme="https://vonfly.github.io/tags/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>收集、总结的一些理论知识（对于面试有帮助）</title>
+    <link href="https://vonfly.github.io/2017/02/09/theoretical-knowledge/"/>
+    <id>https://vonfly.github.io/2017/02/09/theoretical-knowledge/</id>
+    <published>2017-02-09T13:01:03.000Z</published>
+    <updated>2017-02-18T01:27:10.817Z</updated>
+    
+    <content type="html"><![CDATA[<p>本页面主要用于编写一些理论知识，从网上找的或者自己总结的都会有。为什么要写这个页面呢？一来自己的理论知识相对比较薄弱，每次面试的时候，有很多理论知识都回答不上，所以要加深巩固自己的理论知识。二来自己写一遍或者抄一遍总会有点印象，对以后的工作多多少少会有点帮助(●’◡’●)</p>
+<a id="more"></a>
+<h1 id="javascript理论知识"><a href="#javascript理论知识" class="headerlink" title="javascript理论知识"></a>javascript理论知识</h1><h2 id="xml与json区别"><a href="#xml与json区别" class="headerlink" title="xml与json区别"></a>xml与json区别</h2><p>相同点：</p>
+<blockquote>
+<ul>
+<li>都是一种通用协议</li>
+<li>都可以用来描述数据</li>
+</ul>
+</blockquote>
+<p>不同点：</p>
+<blockquote>
+<ul>
+<li>JSON相对于XML来讲，数据的体积小，传递的速度更快些。</li>
+<li>xml专用带宽大，json占用带宽小</li>
+<li>json没有xml这么通用</li>
+<li>json可以和js对象互相转换，和js是天生的一对，因此广泛用于前端开发</li>
+</ul>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本页面主要用于编写一些理论知识，从网上找的或者自己总结的都会有。为什么要写这个页面呢？一来自己的理论知识相对比较薄弱，每次面试的时候，有很多理论知识都回答不上，所以要加深巩固自己的理论知识。二来自己写一遍或者抄一遍总会有点印象，对以后的工作多多少少会有点帮助(●’◡’●)&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="理论知识" scheme="https://vonfly.github.io/categories/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/"/>
+    
+    
+      <category term="面试" scheme="https://vonfly.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>markdown语法-本页面主要用于自己学习</title>
+    <link href="https://vonfly.github.io/2017/02/07/markdown-grammar/"/>
+    <id>https://vonfly.github.io/2017/02/07/markdown-grammar/</id>
+    <published>2017-02-07T14:39:13.000Z</published>
+    <updated>2017-02-18T01:26:19.193Z</updated>
+    
+    <content type="html"><![CDATA[<p>本页面主要用于自己学习的，方便以后写作。当然了，偶尔忘记可以查看一下，文章最底下也有链接，大家可以查看链接的语法说明(●’◡’●)</p>
+<a id="more"></a>
+<h1 id="欢迎使用-Cmd-Markdown-编辑阅读器"><a href="#欢迎使用-Cmd-Markdown-编辑阅读器" class="headerlink" title="欢迎使用 Cmd Markdown 编辑阅读器"></a>欢迎使用 Cmd Markdown 编辑阅读器</h1><hr>
+<p>我们理解您需要更便捷更高效的工具记录思想，整理笔记、知识，并将其中承载的价值传播给他人，<strong>Cmd Markdown</strong> 是我们给出的答案 —— 我们为记录思想和分享知识提供更专业的工具。 您可以使用 Cmd Markdown：</p>
+<blockquote>
+<ul>
+<li>整理知识，学习笔记</li>
+<li>发布日记，杂文，所见所想</li>
+<li>撰写发布技术文稿（代码支持）</li>
+<li>撰写发布学术论文（LaTeX 公式支持）</li>
+</ul>
+</blockquote>
+<p><img src="https://www.zybuluo.com/static/img/logo.png" alt="cmd-markdown-logo"></p>
+<p>除了您现在看到的这个 Cmd Markdown 在线版本，您还可以前往以下网址下载：</p>
+<h3 id="Windows-Mac-Linux-全平台客户端"><a href="#Windows-Mac-Linux-全平台客户端" class="headerlink" title="Windows/Mac/Linux 全平台客户端"></a><a href="https://www.zybuluo.com/cmd/" target="_blank" rel="external">Windows/Mac/Linux 全平台客户端</a></h3><blockquote>
+<p>请保留此份 Cmd Markdown 的欢迎稿兼使用说明，如需撰写新稿件，点击顶部工具栏右侧的 <i class="icon-file"></i> <strong>新文稿</strong> 或者使用快捷键 <code>Ctrl+Alt+N</code>。</p>
+</blockquote>
+<hr>
+<h2 id="什么是-Markdown"><a href="#什么是-Markdown" class="headerlink" title="什么是 Markdown"></a>什么是 Markdown</h2><p>Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档：譬如您正在阅读的这份文档。它使用简单的符号标记不同的标题，分割不同的段落，<strong>粗体</strong> 或者 <em>斜体</em> 某些文字，更棒的是，它还可以</p>
+<h3 id="1-制作一份待办事宜-Todo-列表"><a href="#1-制作一份待办事宜-Todo-列表" class="headerlink" title="1. 制作一份待办事宜 Todo 列表"></a>1. 制作一份待办事宜 <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#13-待办事宜-todo-列表" target="_blank" rel="external">Todo 列表</a></h3><ul>
+<li>[ ] 支持以 PDF 格式导出文稿</li>
+<li>[ ] 改进 Cmd 渲染算法，使用局部渲染技术提高渲染效率</li>
+<li>[x] 新增 Todo 列表功能</li>
+<li>[x] 修复 LaTex 公式渲染问题</li>
+<li>[x] 新增 LaTex 公式编号功能</li>
+</ul>
+<h3 id="2-书写一个质能守恒公式-LaTeX"><a href="#2-书写一个质能守恒公式-LaTeX" class="headerlink" title="2. 书写一个质能守恒公式[^LaTeX]"></a>2. 书写一个质能守恒公式[^LaTeX]</h3><p>$$E=mc^2$$</p>
+<h3 id="3-高亮一段代码-code"><a href="#3-高亮一段代码-code" class="headerlink" title="3. 高亮一段代码[^code]"></a>3. 高亮一段代码[^code]</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@requires_authorization</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></div><div class="line">    <span class="keyword">pass</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    <span class="comment"># A comment</span></div><div class="line">    <span class="keyword">print</span> <span class="string">'hello world'</span></div></pre></td></tr></table></figure>
+<h3 id="4-高效绘制-流程图"><a href="#4-高效绘制-流程图" class="headerlink" title="4. 高效绘制 流程图"></a>4. 高效绘制 <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#7-流程图" target="_blank" rel="external">流程图</a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">st=&gt;start: Start</div><div class="line">op=&gt;operation: Your Operation</div><div class="line">cond=&gt;condition: Yes or No?</div><div class="line">e=&gt;end</div><div class="line"></div><div class="line">st-&gt;op-&gt;cond</div><div class="line">cond(yes)-&gt;e</div><div class="line">cond(no)-&gt;op</div></pre></td></tr></table></figure>
+<h3 id="5-高效绘制-序列图"><a href="#5-高效绘制-序列图" class="headerlink" title="5. 高效绘制 序列图"></a>5. 高效绘制 <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#8-序列图" target="_blank" rel="external">序列图</a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Alice-&gt;Bob: Hello Bob, how are you?</div><div class="line">Note right of Bob: Bob thinks</div><div class="line">Bob--&gt;Alice: I am good thanks!</div></pre></td></tr></table></figure>
+<h3 id="6-高效绘制-甘特图"><a href="#6-高效绘制-甘特图" class="headerlink" title="6. 高效绘制 甘特图"></a>6. 高效绘制 <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#9-甘特图" target="_blank" rel="external">甘特图</a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">title 项目开发流程</div><div class="line">section 项目确定</div><div class="line">    需求分析       :a1, 2016-06-22, 3d</div><div class="line">    可行性报告     :after a1, 5d</div><div class="line">    概念验证       : 5d</div><div class="line">section 项目实施</div><div class="line">    概要设计      :2016-07-05  , 5d</div><div class="line">    详细设计      :2016-07-08, 10d</div><div class="line">    编码          :2016-07-15, 10d</div><div class="line">    测试          :2016-07-22, 5d</div><div class="line">section 发布验收</div><div class="line">    发布: 2d</div><div class="line">    验收: 3d</div></pre></td></tr></table></figure>
+<h3 id="7-绘制表格"><a href="#7-绘制表格" class="headerlink" title="7. 绘制表格"></a>7. 绘制表格</h3><table>
+<thead>
+<tr>
+<th>项目</th>
+<th style="text-align:right">价格</th>
+<th style="text-align:center">数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>计算机</td>
+<td style="text-align:right">\$1600</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td>手机</td>
+<td style="text-align:right">\$12</td>
+<td style="text-align:center">12</td>
+</tr>
+<tr>
+<td>管线</td>
+<td style="text-align:right">\$1</td>
+<td style="text-align:center">234</td>
+</tr>
+</tbody>
+</table>
+<h3 id="8-更详细语法说明"><a href="#8-更详细语法说明" class="headerlink" title="8. 更详细语法说明"></a>8. 更详细语法说明</h3><p>想要查看更详细的语法说明，可以参考我们准备的 <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown" target="_blank" rel="external">Cmd Markdown 简明语法手册</a>，进阶用户可以参考 <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#cmd-markdown-高阶语法手册" target="_blank" rel="external">Cmd Markdown 高阶语法手册</a> 了解更多高级功能。</p>
+<p>总而言之，不同于其它 <em>所见即所得</em> 的编辑器：你只需使用键盘专注于书写文本内容，就可以生成印刷级的排版格式，省却在键盘和工具栏之间来回切换，调整内容和格式的麻烦。<strong>Markdown 在流畅的书写和印刷级的阅读体验之间找到了平衡。</strong> 目前它已经成为世界上最大的技术分享网站 GitHub 和 技术问答网站 StackOverFlow 的御用书写格式。</p>
+<hr>
+<h2 id="什么是-Cmd-Markdown"><a href="#什么是-Cmd-Markdown" class="headerlink" title="什么是 Cmd Markdown"></a>什么是 Cmd Markdown</h2><p>您可以使用很多工具书写 Markdown，但是 Cmd Markdown 是这个星球上我们已知的、最好的 Markdown 工具——没有之一 ：）因为深信文字的力量，所以我们和你一样，对流畅书写，分享思想和知识，以及阅读体验有极致的追求，我们把对于这些诉求的回应整合在 Cmd Markdown，并且一次，两次，三次，乃至无数次地提升这个工具的体验，最终将它演化成一个 <strong>编辑/发布/阅读</strong> Markdown 的在线平台——您可以在任何地方，任何系统/设备上管理这里的文字。</p>
+<h3 id="1-实时同步预览"><a href="#1-实时同步预览" class="headerlink" title="1. 实时同步预览"></a>1. 实时同步预览</h3><p>我们将 Cmd Markdown 的主界面一分为二，左边为<strong>编辑区</strong>，右边为<strong>预览区</strong>，在编辑区的操作会实时地渲染到预览区方便查看最终的版面效果，并且如果你在其中一个区拖动滚动条，我们有一个巧妙的算法把另一个区的滚动条同步到等价的位置，超酷！</p>
+<h3 id="2-编辑工具栏"><a href="#2-编辑工具栏" class="headerlink" title="2. 编辑工具栏"></a>2. 编辑工具栏</h3><p>也许您还是一个 Markdown 语法的新手，在您完全熟悉它之前，我们在 <strong>编辑区</strong> 的顶部放置了一个如下图所示的工具栏，您可以使用鼠标在工具栏上调整格式，不过我们仍旧鼓励你使用键盘标记格式，提高书写的流畅度。</p>
+<p><img src="https://www.zybuluo.com/static/img/toolbar-editor.png" alt="tool-editor"></p>
+<h3 id="3-编辑模式"><a href="#3-编辑模式" class="headerlink" title="3. 编辑模式"></a>3. 编辑模式</h3><p>完全心无旁骛的方式编辑文字：点击 <strong>编辑工具栏</strong> 最右侧的拉伸按钮或者按下 <code>Ctrl + M</code>，将 Cmd Markdown 切换到独立的编辑模式，这是一个极度简洁的写作环境，所有可能会引起分心的元素都已经被挪除，超清爽！</p>
+<h3 id="4-实时的云端文稿"><a href="#4-实时的云端文稿" class="headerlink" title="4. 实时的云端文稿"></a>4. 实时的云端文稿</h3><p>为了保障数据安全，Cmd Markdown 会将您每一次击键的内容保存至云端，同时在 <strong>编辑工具栏</strong> 的最右侧提示 <code>已保存</code> 的字样。无需担心浏览器崩溃，机器掉电或者地震，海啸——在编辑的过程中随时关闭浏览器或者机器，下一次回到 Cmd Markdown 的时候继续写作。</p>
+<h3 id="5-离线模式"><a href="#5-离线模式" class="headerlink" title="5. 离线模式"></a>5. 离线模式</h3><p>在网络环境不稳定的情况下记录文字一样很安全！在您写作的时候，如果电脑突然失去网络连接，Cmd Markdown 会智能切换至离线模式，将您后续键入的文字保存在本地，直到网络恢复再将他们传送至云端，即使在网络恢复前关闭浏览器或者电脑，一样没有问题，等到下次开启 Cmd Markdown 的时候，她会提醒您将离线保存的文字传送至云端。简而言之，我们尽最大的努力保障您文字的安全。</p>
+<h3 id="6-管理工具栏"><a href="#6-管理工具栏" class="headerlink" title="6. 管理工具栏"></a>6. 管理工具栏</h3><p>为了便于管理您的文稿，在 <strong>预览区</strong> 的顶部放置了如下所示的 <strong>管理工具栏</strong>：</p>
+<p><img src="https://www.zybuluo.com/static/img/toolbar-manager.jpg" alt="tool-manager"></p>
+<p>通过管理工具栏可以：</p>
+<p><i class="icon-share"></i> 发布：将当前的文稿生成固定链接，在网络上发布，分享<br><i class="icon-file"></i> 新建：开始撰写一篇新的文稿<br><i class="icon-trash"></i> 删除：删除当前的文稿<br><i class="icon-cloud"></i> 导出：将当前的文稿转化为 Markdown 文本或者 Html 格式，并导出到本地<br><i class="icon-reorder"></i> 列表：所有新增和过往的文稿都可以在这里查看、操作<br><i class="icon-pencil"></i> 模式：切换 普通/Vim/Emacs 编辑模式</p>
+<h3 id="7-阅读工具栏"><a href="#7-阅读工具栏" class="headerlink" title="7. 阅读工具栏"></a>7. 阅读工具栏</h3><p><img src="https://www.zybuluo.com/static/img/toolbar-reader.jpg" alt="tool-manager"></p>
+<p>通过 <strong>预览区</strong> 右上角的 <strong>阅读工具栏</strong>，可以查看当前文稿的目录并增强阅读体验。</p>
+<p>工具栏上的五个图标依次为：</p>
+<p><i class="icon-list"></i> 目录：快速导航当前文稿的目录结构以跳转到感兴趣的段落<br><i class="icon-chevron-sign-left"></i> 视图：互换左边编辑区和右边预览区的位置<br><i class="icon-adjust"></i> 主题：内置了黑白两种模式的主题，试试 <strong>黑色主题</strong>，超炫！<br><i class="icon-desktop"></i> 阅读：心无旁骛的阅读模式提供超一流的阅读体验<br><i class="icon-fullscreen"></i> 全屏：简洁，简洁，再简洁，一个完全沉浸式的写作和阅读环境</p>
+<h3 id="8-阅读模式"><a href="#8-阅读模式" class="headerlink" title="8. 阅读模式"></a>8. 阅读模式</h3><p>在 <strong>阅读工具栏</strong> 点击 <i class="icon-desktop"></i> 或者按下 <code>Ctrl+Alt+M</code> 随即进入独立的阅读模式界面，我们在版面渲染上的每一个细节：字体，字号，行间距，前背景色都倾注了大量的时间，努力提升阅读的体验和品质。</p>
+<h3 id="9-标签、分类和搜索"><a href="#9-标签、分类和搜索" class="headerlink" title="9. 标签、分类和搜索"></a>9. 标签、分类和搜索</h3><p>在编辑区任意行首位置输入以下格式的文字可以标签当前文档：</p>
+<p>标签： 未分类</p>
+<p>标签以后的文稿在【文件列表】（Ctrl+Alt+F）里会按照标签分类，用户可以同时使用键盘或者鼠标浏览查看，或者在【文件列表】的搜索文本框内搜索标题关键字过滤文稿，如下图所示：</p>
+<p><img src="https://www.zybuluo.com/static/img/file-list.png" alt="file-list"></p>
+<h3 id="10-文稿发布和分享"><a href="#10-文稿发布和分享" class="headerlink" title="10. 文稿发布和分享"></a>10. 文稿发布和分享</h3><p>在您使用 Cmd Markdown 记录，创作，整理，阅读文稿的同时，我们不仅希望它是一个有力的工具，更希望您的思想和知识通过这个平台，连同优质的阅读体验，将他们分享给有相同志趣的人，进而鼓励更多的人来到这里记录分享他们的思想和知识，尝试点击 <i class="icon-share"></i> (Ctrl+Alt+P) 发布这份文档给好友吧！</p>
+<hr>
+<p>再一次感谢您花费时间阅读这份欢迎稿，点击 <i class="icon-file"></i> (Ctrl+Alt+N) 开始撰写新的文稿吧！祝您在这里记录、阅读、分享愉快！</p>
+<p>作者 <a href="http://weibo.com/ghosert" target="_blank" rel="external">@ghosert</a><br>2016 年 07月 07日    </p>
+<p>[^LaTeX]: 支持 <strong>LaTeX</strong> 编辑显示支持，例如：$\sum_{i=1}^n a_i=0$， 访问 <a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="external">MathJax</a> 参考更多使用方法。</p>
+<p>[^code]: 代码高亮功能支持包括 Java, Python, JavaScript 在内的，<strong>四十一</strong>种主流编程语言。</p>
+<p>参考：<br><a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">Cmd Markdown 编辑阅读器</a><br><a href="http://www.appinn.com/markdown/" target="_blank" rel="external">Markdown 语法说明 (简体中文版)</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本页面主要用于自己学习的，方便以后写作。当然了，偶尔忘记可以查看一下，文章最底下也有链接，大家可以查看链接的语法说明(●’◡’●)&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="其它" scheme="https://vonfly.github.io/categories/%E5%85%B6%E5%AE%83/"/>
+    
+    
+      <category term="Markdown语法" scheme="https://vonfly.github.io/tags/Markdown%E8%AF%AD%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多台电脑共同管理hexo博客</title>
+    <link href="https://vonfly.github.io/2016/02/18/hexo-version-control/"/>
+    <id>https://vonfly.github.io/2016/02/18/hexo-version-control/</id>
+    <published>2016-02-18T02:33:57.000Z</published>
+    <updated>2017-02-18T01:34:29.014Z</updated>
+    
+    <content type="html"><![CDATA[<p>使用hexo搭建博客，如果换了电脑怎么更新博客？如果你有备份源文件那还好，但是每次都要备份感觉太麻烦了。<br>这里介绍一种方法就是使用github分支。一个分支用来存放Hexo生成的网站原始的文件，另一个分支用来存放生成的静态网页。<br>网上也有其他的方法，大家可以去搜一下，自己看看哪种适合自己，我用这种方法一方面我git命令也不太熟，所以想多写写，多学学。<br><a id="more"></a></p>
+<p>先删除主题文件下的.git文件，<br>可以直接删除或者执行下面的命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ rm -rf .git</div></pre></td></tr></table></figure>
+<p>然后在本地博客文件夹下边依次输入以下指令(部分指令因为有提示可以自己修改下)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ git init</div><div class="line">$ git checkout -b hexo</div><div class="line">$ git remote add origin git@github.com:vonfly（你自己giuhub账号名）/vonfly.github.io（项目名）.git</div><div class="line">$ git add .</div><div class="line">$ git commit -m <span class="string">"提交说明"</span></div><div class="line">$ git push origin hexo</div></pre></td></tr></table></figure>
+<p>执行到这里我们就已经把本地的源文件添加到了分支hexo上。</p>
+<p>说明：博客文件夹下根目录.gitignore（此文件的作用是因此忽略所写的文件或者目录，加快push速度。）可以不修改，我的就没有修改，如果不修改的话<br>在；另外一台电脑上克隆下来的博客项目就要先运行一下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install</div></pre></td></tr></table></figure>
+<p>我的.gitignore文件内容为<br>.DS_Store<br>Thumbs.db<br>db.json<br><em>.log<br>node_modules/<br>public/<br>.deploy</em>/</p>
+<p>当然你也可以把node_modules/去掉，这样在另外的电脑克隆下来的项目就不用在运行上面的命令了</p>
+<p>扩展：</p>
+<h3 id="github常见操作和常见错误！"><a href="#github常见操作和常见错误！" class="headerlink" title="github常见操作和常见错误！"></a>github常见操作和常见错误！</h3><h4 id="如果输入-git-remote-add-origin-git-github-com-vonfly（github帐号名）-vonfly-github-io（项目名）-git"><a href="#如果输入-git-remote-add-origin-git-github-com-vonfly（github帐号名）-vonfly-github-io（项目名）-git" class="headerlink" title="如果输入$ git remote add origin git@github.com:vonfly（github帐号名）/vonfly.github.io（项目名）.git"></a>如果输入$ git remote add origin git@github.com:vonfly（github帐号名）/vonfly.github.io（项目名）.git</h4><p>提示出错信息：fatal: remote origin already exists.</p>
+<p>解决办法如下：<br>    1、先输入$ git remote rm origin<br>    2、再输入$ git remote add origin git@github.com:vonfly/vonfly.github.io.git 就不会报错了！</p>
+<h4 id="如果输入-git-remote-rm-origin-还是报错的话，"><a href="#如果输入-git-remote-rm-origin-还是报错的话，" class="headerlink" title="如果输入$ git remote rm origin 还是报错的话，"></a>如果输入$ git remote rm origin 还是报错的话，</h4><p>error: Could not remove config section ‘remote.origin’. 我们需要修改gitconfig文件的内容<br>4、找到你的github的安装路径，我的是C:\Users\ASUS\AppData\Local\GitHub\PortableGit_ca477551eeb4aea0e4ae9fcd3358bd96720bb5c8\etc<br>5、找到一个名为gitconfig的文件，打开它把里面的[remote “origin”]那一行删掉就好了！</p>
+<h4 id="如果输入-git-push-origin-master"><a href="#如果输入-git-push-origin-master" class="headerlink" title="如果输入$ git push origin master"></a>如果输入$ git push origin master</h4><p>提示出错信息：error:failed to push som refs to …….<br>解决办法如下：<br>    1、先输入$ git pull origin master //先把远程服务器github上面的文件拉下来<br>    2、再输入$ git push origin master<br>    3、如果出现报错 fatal: Couldn’t find remote ref master或者fatal: ‘origin’ does not appear to be a git repository以及fatal: Could not read from remote repository.<br>    4、则需要重新输入$ git remote add origin git@github.com:vonfly/vonfly.github.io.git</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;使用hexo搭建博客，如果换了电脑怎么更新博客？如果你有备份源文件那还好，但是每次都要备份感觉太麻烦了。&lt;br&gt;这里介绍一种方法就是使用github分支。一个分支用来存放Hexo生成的网站原始的文件，另一个分支用来存放生成的静态网页。&lt;br&gt;网上也有其他的方法，大家可以去搜一下，自己看看哪种适合自己，我用这种方法一方面我git命令也不太熟，所以想多写写，多学学。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="其它" scheme="https://vonfly.github.io/categories/%E5%85%B6%E5%AE%83/"/>
+    
+    
+      <category term="hexo" scheme="https://vonfly.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用的一些命令</title>
+    <link href="https://vonfly.github.io/2016/02/16/common-commands/"/>
+    <id>https://vonfly.github.io/2016/02/16/common-commands/</id>
+    <published>2016-02-16T12:20:58.000Z</published>
+    <updated>2017-02-18T01:23:40.146Z</updated>
+    
+    <content type="html"><![CDATA[<p>平时写博客或者做项目会用到的一些命令<br><a id="more"></a></p>
+<h3 id="hexo命令"><a href="#hexo命令" class="headerlink" title="hexo命令"></a>hexo命令</h3><p>init 新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init [folder]</div></pre></td></tr></table></figure></p>
+<p>new 新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new [layout] &lt;title&gt;</div></pre></td></tr></table></figure></p>
+<p>generate 生成网站(即生成静态文件)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure></p>
+<p>参数说明</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th style="text-align:right">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-d, –deploy</td>
+<td style="text-align:right">文件生成后立即部署网站</td>
+</tr>
+<tr>
+<td>-w, –watch</td>
+<td style="text-align:right">监视文件变动</td>
+</tr>
+</tbody>
+</table>
+<p>server 启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/。" target="_blank" rel="external">http://localhost:4000/。</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure></p>
+<p>参数说明</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th style="text-align:right">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-p, –port</td>
+<td style="text-align:right">重设端口</td>
+</tr>
+<tr>
+<td>-s, –static</td>
+<td style="text-align:right">只使用静态文件</td>
+</tr>
+<tr>
+<td>-l, –log</td>
+<td style="text-align:right">启动日志记录，使用覆盖记录格式</td>
+</tr>
+</tbody>
+</table>
+<p>deploy 部署网站。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure></p>
+<p>参数说明</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th style="text-align:right">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-g, –generate</td>
+<td style="text-align:right">部署之前预先生成静态文件</td>
+</tr>
+</tbody>
+</table>
+<p>clean 清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div></pre></td></tr></table></figure></p>
+<p>version 显示 Hexo 版本。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo version</div></pre></td></tr></table></figure></p>
+<p>安装 Hexo Algolia 扩展（用于页面搜索）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-algolia@0.2.0</div></pre></td></tr></table></figure></p>
+<h3 id="git一些命令"><a href="#git一些命令" class="headerlink" title="git一些命令"></a>git一些命令</h3><p>在当前目录新建一个Git代码库<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git init</div></pre></td></tr></table></figure></p>
+<p>新建一个目录，将其初始化为Git代码库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git init [project-name]</div></pre></td></tr></table></figure>
+<p>下载一个项目和它的整个代码历史</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> [url]</div></pre></td></tr></table></figure>
+<h4 id="增加-删除文件"><a href="#增加-删除文件" class="headerlink" title="增加/删除文件"></a>增加/删除文件</h4><p>添加指定文件到暂存区<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git add [file1] [file2] ...</div></pre></td></tr></table></figure></p>
+<p>添加指定目录到暂存区，包括子目录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git add [dir]</div></pre></td></tr></table></figure></p>
+<p>将所有修改过的工作文件提交暂存区<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ add .</div></pre></td></tr></table></figure></p>
+<p>添加每个变化前，都会要求确认，<br>对于同一个文件的多处变化，可以实现分次提交<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git add -p</div></pre></td></tr></table></figure></p>
+<p>删除暂存区文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git rm file.name</div></pre></td></tr></table></figure></p>
+<p>(工作区和暂存区都存在的情况下)删除工作区文件，同时删除暂存区文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git rm <span class="_">-f</span> file.name</div></pre></td></tr></table></figure></p>
+<p>(工作区和暂存区都存在的情况下)不删除工作区文件，删除暂存区文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git rm --cached file.name</div></pre></td></tr></table></figure></p>
+<p>改名文件，并且将这个改名放入暂存区<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git mv [file-original] [file-renamed]</div></pre></td></tr></table></figure></p>
+<h4 id="代码提交"><a href="#代码提交" class="headerlink" title="代码提交"></a>代码提交</h4><p>提交暂存区到仓库区（提交说明要用英文引号）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git commit -m [提交说明]</div></pre></td></tr></table></figure></p>
+<p>提交暂存区到仓库区<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git commit [file1] [file2] ... -m [提交说明]</div></pre></td></tr></table></figure></p>
+<h4 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h4><p>列出所有本地分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git branch</div></pre></td></tr></table></figure></p>
+<p>列出所有远程分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git branch -r</div></pre></td></tr></table></figure></p>
+<p>列出所有本地分支和远程分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git branch <span class="_">-a</span></div></pre></td></tr></table></figure></p>
+<p>新建一个分支，但依然停留在当前分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git branch [branch-name]</div></pre></td></tr></table></figure></p>
+<p>新建一个分支，并切换到该分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git checkout -b [branch]</div></pre></td></tr></table></figure></p>
+<p>新建一个分支，指向指定commit<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git branch [branch] [commit]</div></pre></td></tr></table></figure></p>
+<p>新建一个分支，与指定的远程分支建立追踪关系<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git branch --track [branch] [remote-branch]</div></pre></td></tr></table></figure></p>
+<p>切换到指定分支，并更新工作区<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git checkout [branch-name]</div></pre></td></tr></table></figure></p>
+<p>切换到上一个分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git checkout -</div></pre></td></tr></table></figure></p>
+<p>建立追踪关系，在现有分支与指定的远程分支之间<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git branch --set-upstream [branch] [remote-branch]</div></pre></td></tr></table></figure></p>
+<p>合并指定分支到当前分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git merge [branch]</div></pre></td></tr></table></figure></p>
+<p>选择一个commit，合并进当前分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git cherry-pick [commit]</div></pre></td></tr></table></figure></p>
+<p>删除分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git branch <span class="_">-d</span> [branch-name]</div></pre></td></tr></table></figure></p>
+<p>删除远程分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git push origin --delete [branch-name]</div><div class="line">$ git branch -dr [remote/branch]</div></pre></td></tr></table></figure></p>
+<h4 id="查看信息"><a href="#查看信息" class="headerlink" title="查看信息"></a>查看信息</h4><p>显示有变更的文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git status</div></pre></td></tr></table></figure></p>
+<p>显示当前分支的版本历史<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">log</span></div></pre></td></tr></table></figure></p>
+<p>显示之后版本历史<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git reflog</div></pre></td></tr></table></figure></p>
+<p>显示commit历史，以及每次commit发生变更的文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">log</span> --stat</div></pre></td></tr></table></figure></p>
+<p>搜索提交历史，根据关键词<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">log</span> -S [keyword]</div></pre></td></tr></table></figure></p>
+<p>显示某个文件的版本历史，包括文件改名<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">log</span> --follow [file]</div><div class="line">$ git whatchanged [file]</div></pre></td></tr></table></figure></p>
+<p>显示指定文件相关的每一次diff<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">log</span> -p [file]</div></pre></td></tr></table></figure></p>
+<p>显示过去5次提交<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">log</span> -5 --pretty --oneline</div></pre></td></tr></table></figure></p>
+<p>显示指定文件是什么人在什么时间修改过<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git blame [file]</div></pre></td></tr></table></figure></p>
+<p>显示暂存区和工作区的差异<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git diff</div></pre></td></tr></table></figure></p>
+<p>显示暂存区和上一个commit的差异<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git diff --cached [file]</div></pre></td></tr></table></figure></p>
+<p>显示工作区与当前分支最新commit之间的差异<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git diff HEAD</div></pre></td></tr></table></figure></p>
+<p>显示两次提交之间的差异<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git diff [first-branch]...[second-branch]</div></pre></td></tr></table></figure></p>
+<h4 id="远程同步"><a href="#远程同步" class="headerlink" title="远程同步"></a>远程同步</h4><p>下载远程仓库的所有变动<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git fetch [remote]</div></pre></td></tr></table></figure></p>
+<p>显示所有远程仓库<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git remote -v</div></pre></td></tr></table></figure></p>
+<p>显示某个远程仓库的信息<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git remote show [remote]</div></pre></td></tr></table></figure></p>
+<p>增加一个新的远程仓库，并命名<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git remote add [shortname] [url]</div></pre></td></tr></table></figure></p>
+<p>取回远程仓库的变化，并与本地分支合并<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git pull [remote] [branch]</div></pre></td></tr></table></figure></p>
+<p>上传本地指定分支到远程仓库<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git push [remote] [branch]</div></pre></td></tr></table></figure></p>
+<p>推送所有分支到远程仓库<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git push [remote] --all</div></pre></td></tr></table></figure></p>
+<h4 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h4><p>恢复暂存区的指定文件到工作区<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git checkout [file]</div></pre></td></tr></table></figure></p>
+<p>恢复某个commit的指定文件到暂存区和工作区<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git checkout [commit] [file]</div></pre></td></tr></table></figure></p>
+<p>恢复暂存区的所有文件到工作区<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git checkout .</div></pre></td></tr></table></figure></p>
+<h5 id="整个版本的撤销"><a href="#整个版本的撤销" class="headerlink" title="整个版本的撤销"></a>整个版本的撤销</h5><p>重置暂存区的指定文件，与上一次commit保持一致，但工作区不变<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git reset [file]</div></pre></td></tr></table></figure></p>
+<p>重置暂存区与工作区，与上一次commit保持一致<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git reset --hard [commit]</div></pre></td></tr></table></figure></p>
+<h4 id="显示当前的Git配置"><a href="#显示当前的Git配置" class="headerlink" title="显示当前的Git配置"></a>显示当前的Git配置</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git config --list</div></pre></td></tr></table></figure>
+<p>编辑Git配置文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git config <span class="_">-e</span> [--global]</div></pre></td></tr></table></figure></p>
+<p>设置提交代码时的用户信息<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git config [--global] user.name <span class="string">"your username"</span></div><div class="line">$ git config [--global] user.email <span class="string">"your e-mail"</span></div></pre></td></tr></table></figure></p>
+<h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><h4 id="多人协作解决冲突"><a href="#多人协作解决冲突" class="headerlink" title="多人协作解决冲突"></a>多人协作解决冲突</h4><p>推荐方法1：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git fetch</div><div class="line">$ git diff master origin/master</div><div class="line">$ git merge orgin/master</div></pre></td></tr></table></figure></p>
+<p>方法2：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git pull</div></pre></td></tr></table></figure></p>
+<p>参考：<br><a href="http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html" target="_blank" rel="external">阮一峰-常用 Git 命令清单</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;平时写博客或者做项目会用到的一些命令&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="命令使用" scheme="https://vonfly.github.io/tags/%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GitHub+Hexo+Next搭建免费独立个人博客</title>
+    <link href="https://vonfly.github.io/2016/01/22/hello-world/"/>
+    <id>https://vonfly.github.io/2016/01/22/hello-world/</id>
+    <published>2016-01-22T12:20:58.000Z</published>
+    <updated>2017-02-18T01:46:46.587Z</updated>
+    
+    <content type="html"><![CDATA[<p>我为什么要搭建个人博客呢，一来有自己的博客会显得高大尚一点，二来也可以当作学习新知识</p>
+<a id="more"></a>
+<h2 id="搭建步骤"><a href="#搭建步骤" class="headerlink" title="搭建步骤"></a>搭建步骤</h2><p>node.js Git 是必须工具</p>
+<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>前往<a href="https://git-scm.com/downloads" target="_blank" rel="external">Git官网</a>下载Windows版本压缩包，下载完成后解压安装。（一直下一步即可）</p>
+<p>当你安装Git后首先要做的事情是设置你的用户名称和e-mail地址。这是非常重要的，因为每次Git提交都会使用该信息。它被永远的嵌入到了你的提交中：在命令行中输入：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git config --global user.name <span class="string">"your username"</span></div><div class="line">$ git config --global user.email <span class="string">"your e-mail"</span></div></pre></td></tr></table></figure></p>
+<p>重申一遍，你只需要做一次这个设置。如果你传递了 –global 选项，因为Git将总是会使用该信息来处理你在系统中所做的一切操作。如果你希望在一个特定的项目中使用不同的名称或e-mail地址，你可以在该项目中运行该命令而不要–global选项。</p>
+<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>前往<a href="https://nodejs.org/en/download/" target="_blank" rel="external">Node.js官方</a>下载网站，选择适合自己系统的进行下载，下载完成后同样解压安装。（一直下一步即可）</p>
+<h3 id="注册Github账户"><a href="#注册Github账户" class="headerlink" title="注册Github账户"></a>注册Github账户</h3><p>前往Github网站，注册一个新用户。创建一个新的repository</p>
+<p>在自己的Github主页右上角的加号,创建一个新的repository。比如我的Github用户名为vonfly，那么我创建的repository的名字应该是 vonfly.github.io</p>
+<h3 id="给本机配置SSH-Key"><a href="#给本机配置SSH-Key" class="headerlink" title="给本机配置SSH-Key"></a>给本机配置SSH-Key</h3><p>打开Git Bash，在命令行中输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C <span class="string">"your e-mail"</span></div></pre></td></tr></table></figure>
+<p>之后一直回车，就可以了<br>成功之后在命令行中找到这两段<br>Your identification has been saved in /c/Users/XZY-06/.ssh/id_rsa.<br>Your public key has been saved in /c/Users/XZY-06/.ssh/id_rsa.pub.<br>打开所对应的文件夹，找到 id_rsa.pub文件，用编辑器打开，复制其中的全部内容。<br>登陆你的GitHub账户，依次点击账号Settings &gt; SSH and GPG keys &gt; new SSH key，把id_rsa.<br>pub中的内容拷贝进去key项，title项随意填 。</p>
+<p>至此就已经配置完SSH-Key了</p>
+<h3 id="安装Hexo（安装需要花一些时间）"><a href="#安装Hexo（安装需要花一些时间）" class="headerlink" title="安装Hexo（安装需要花一些时间）"></a>安装Hexo（安装需要花一些时间）</h3><p>点击鼠标右键，看是否有Git bash Here选项。如果没有可以前往Git安装根目录，启动git-base.exe也可以。在命令行中输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure>
+<h3 id="创建myblog文件夹"><a href="#创建myblog文件夹" class="headerlink" title="创建myblog文件夹"></a>创建myblog文件夹</h3><p>找到想要放置博客的文件夹，比如（F:\myblog），在该目录下鼠标右击打开Gitbash工具。在命令行中输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init</div></pre></td></tr></table></figure>
+<p>这里init后面可以跟文件目录，比如我想在F:\text下创建博客文件夹，那么可以用下面的命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init F:\text</div></pre></td></tr></table></figure>
+<h3 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h3><p>在myblog目录下，执行以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install</div></pre></td></tr></table></figure>
+<h3 id="安装完后的目录结构"><a href="#安装完后的目录结构" class="headerlink" title="安装完后的目录结构"></a>安装完后的目录结构</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">├── _config.yml //网站的配置信息（也就是站点配置文件）</div><div class="line">├── package.json //应用程序数据，指明hexo的版本等信息</div><div class="line">├── scaffolds //模版文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。</div><div class="line">├── <span class="built_in">source</span> //文章源码目录，该目录下的markdown和html文件均会被hexo处理。</div><div class="line">| ├── _posts  //新建的文章都将存放在此目录下。编辑&lt;文件名&gt;.md文件可修改内容。</div><div class="line">└── themes //主题文件夹。Hexo会根据主题来生成静态页面。</div></pre></td></tr></table></figure>
+<h3 id="本地调试（在myblog目录下，依次执行以下命令）"><a href="#本地调试（在myblog目录下，依次执行以下命令）" class="headerlink" title="本地调试（在myblog目录下，依次执行以下命令）"></a>本地调试（在myblog目录下，依次执行以下命令）</h3><h4 id="1-生成网站"><a href="#1-生成网站" class="headerlink" title="1.生成网站"></a>1.生成网站</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<h4 id="2-本地服务器"><a href="#2-本地服务器" class="headerlink" title="2.本地服务器"></a>2.本地服务器</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>然后在浏览器中输入 localhost:4000 就可以看到自己的博客了<br>如果打开很慢或者打开不了，可以更改下端口<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server -p 3000</div></pre></td></tr></table></figure></p>
+<p>重新在浏览器中输入 localhost:3000即可，至此我们已经搭建好自己的Hexo博客了，不过博客采用的主题是默认的主题，而我们要使用简洁优雅且易于使用NexT主题</p>
+<h3 id="Next主题"><a href="#Next主题" class="headerlink" title="Next主题"></a>Next主题</h3><h4 id="1-下载Next主题（下载需要一点时间）"><a href="#1-下载Next主题（下载需要一点时间）" class="headerlink" title="1.下载Next主题（下载需要一点时间）"></a>1.下载Next主题（下载需要一点时间）</h4><p>在myblog目录下，执行以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
+<h4 id="2-启用Next主题"><a href="#2-启用Next主题" class="headerlink" title="2.启用Next主题"></a>2.启用Next主题</h4><p>下载完成后，打开站点配置文件(即更目录下的_config.yml)，找到theme字段，并将其值更改为 next。<br>再重新执行本地调试那一步骤的命令查看效果即可</p>
+<h3 id="将本地的文件部署（上传）到Github账户中"><a href="#将本地的文件部署（上传）到Github账户中" class="headerlink" title="将本地的文件部署（上传）到Github账户中"></a>将本地的文件部署（上传）到Github账户中</h3><p>打开站点配置文件(即更目录下的_config.yml)，在最后添加如下代码（在你修改时，把 repository更换成之前步骤创建新的repository仓库地址）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repository: https://github.com/vonfly/vonfly.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+<p>执行以下指令即可完成部署（如果提示错误，可以看下面出错原因及解决方法）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>1.每次修改本地文件，都需要命令$ hexo generate才能保存。而且每次使用命令都必须在myblog根目录下使用。</p>
+<p>2.如果你在执行$ hexo deloy,如果提示 ERROR Deployer not found: git，<br>那说明你没有安装hexo-deployer-git依赖包，进入F:\Hexo\node_modules发现真的没有hexo-deployer-git。<br>解决方法：<br>①只需要输入下面命令创建hexo-deployer-git依赖包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<p>　<br>②然后再执行hexo deploy就能上传成功了<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure></p>
+<p>直接在浏览器访问vonfly.github.io试试</p>
+<p>博客安装和主题配置参考：<br><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">hexo官网</a><br><a href="http://theme-next.iissnan.com/getting-started.html#top" target="_blank" rel="external">next主题官网</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我为什么要搭建个人博客呢，一来有自己的博客会显得高大尚一点，二来也可以当作学习新知识&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="其它" scheme="https://vonfly.github.io/categories/%E5%85%B6%E5%AE%83/"/>
+    
+    
+      <category term="hexo" scheme="https://vonfly.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+</feed>
