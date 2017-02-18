@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="hexo," />
 
 
 
@@ -90,7 +90,7 @@
 <meta property="og:url" content="https://vonfly.github.io/2016/02/18/hexo-version-control/index.html">
 <meta property="og:site_name" content="编程、人生">
 <meta property="og:description" content="使用hexo搭建博客，如果换了电脑怎么更新博客？如果你有备份源文件那还好，但是每次都要备份感觉太麻烦了。这里介绍一种方法就是使用github分支。一个分支用来存放Hexo生成的网站原始的文件，另一个分支用来存放生成的静态网页。网上也有其他的方法，大家可以去搜一下，自己看看哪种适合自己，我用这种方法一方面我git命令也不太熟，所以想多写写，多学学。">
-<meta property="og:updated_time" content="2017-02-07T13:20:39.225Z">
+<meta property="og:updated_time" content="2017-02-18T01:34:29.014Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多台电脑共同管理hexo博客">
 <meta name="twitter:description" content="使用hexo搭建博客，如果换了电脑怎么更新博客？如果你有备份源文件那还好，但是每次都要备份感觉太麻烦了。这里介绍一种方法就是使用github分支。一个分支用来存放Hexo生成的网站原始的文件，另一个分支用来存放生成的静态网页。网上也有其他的方法，大家可以去搜一下，自己看看哪种适合自己，我用这种方法一方面我git命令也不太熟，所以想多写写，多学学。">
@@ -348,6 +348,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/其它/" itemprop="url" rel="index">
+                    <span itemprop="name">其它</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -389,7 +411,8 @@
 
       
         <p>使用hexo搭建博客，如果换了电脑怎么更新博客？如果你有备份源文件那还好，但是每次都要备份感觉太麻烦了。<br>这里介绍一种方法就是使用github分支。一个分支用来存放Hexo生成的网站原始的文件，另一个分支用来存放生成的静态网页。<br>网上也有其他的方法，大家可以去搜一下，自己看看哪种适合自己，我用这种方法一方面我git命令也不太熟，所以想多写写，多学学。<br><a id="more"></a></p>
-<p>先删除主题文件下的.git文件</p>
+<p>先删除主题文件下的.git文件，<br>可以直接删除或者执行下面的命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ rm -rf .git</div></pre></td></tr></table></figure>
 <p>然后在本地博客文件夹下边依次输入以下指令(部分指令因为有提示可以自己修改下)</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ git init</div><div class="line">$ git checkout -b hexo</div><div class="line">$ git remote add origin git@github.com:vonfly（你自己giuhub账号名）/vonfly.github.io（项目名）.git</div><div class="line">$ git add .</div><div class="line">$ git commit -m <span class="string">"提交说明"</span></div><div class="line">$ git push origin hexo</div></pre></td></tr></table></figure>
 <p>执行到这里我们就已经把本地的源文件添加到了分支hexo上。</p>
@@ -443,6 +466,12 @@
 
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+        </div>
       
 
       
@@ -556,7 +585,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
