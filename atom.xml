@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vonfly.github.io/"/>
-  <updated>2017-02-19T16:02:35.175Z</updated>
+  <updated>2017-02-20T12:22:55.816Z</updated>
   <id>https://vonfly.github.io/</id>
   
   <author>
@@ -14,31 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>gulp</title>
-    <link href="https://vonfly.github.io/2017/02/19/gulp/"/>
-    <id>https://vonfly.github.io/2017/02/19/gulp/</id>
-    <published>2017-02-19T15:40:09.000Z</published>
-    <updated>2017-02-19T16:02:35.175Z</updated>
-    
-    <content type="html"><![CDATA[<p>初识gulp自动化构建工具。一开始只是听过这个东西，没有尝试用过。听起来好像很高大上的样子，一直想要去尝试用一下，但一直没有去用过。一来现在的项目没有用到；二来之前好像确实是挺忙的，没有找到什么合适的时间去尝试用下；三来嘛感觉这么高大上的东西可能学起来应该会很难，会花费很多时间。<br>ps：很多事情只有去尝试了才会知道难不难，很多东西你觉得难可能是因为你没有用过它，或者不知道它是用来做什么的，只有你勇敢的踏出一步去尝试用下，你就会发现其实没有那么难。(●’◡’●)<br><a id="more"></a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;初识gulp自动化构建工具。一开始只是听过这个东西，没有尝试用过。听起来好像很高大上的样子，一直想要去尝试用一下，但一直没有去用过。一来现在的项目没有用到；二来之前好像确实是挺忙的，没有找到什么合适的时间去尝试用下；三来嘛感觉这么高大上的东西可能学起来应该会很难，会花费很多时间。&lt;br&gt;ps：很多事情只有去尝试了才会知道难不难，很多东西你觉得难可能是因为你没有用过它，或者不知道它是用来做什么的，只有你勇敢的踏出一步去尝试用下，你就会发现其实没有那么难。(●’◡’●)&lt;br&gt;
-    
-    </summary>
-    
-      <category term="自动化构建工具" scheme="https://vonfly.github.io/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="gulp" scheme="https://vonfly.github.io/tags/gulp/"/>
-    
-      <category term="代码优化" scheme="https://vonfly.github.io/tags/%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96/"/>
-    
-  </entry>
   
   <entry>
     <title>sublime使用技巧-持续更新</title>
@@ -217,6 +192,31 @@
     
     
       <category term="Markdown语法" scheme="https://vonfly.github.io/tags/Markdown%E8%AF%AD%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>gulp</title>
+    <link href="https://vonfly.github.io/2016/11/02/gulp/"/>
+    <id>https://vonfly.github.io/2016/11/02/gulp/</id>
+    <published>2016-11-02T15:40:09.000Z</published>
+    <updated>2017-02-20T12:26:56.102Z</updated>
+    
+    <content type="html"><![CDATA[<p>初识gulp自动化构建工具。一开始只是听过这个东西，没有尝试用过。听起来好像很高大上的样子，一直想要去尝试用一下，但一直没有去用过。一来现在的项目没有用到；二来之前好像确实是挺忙的，没有找到什么合适的时间去尝试用下；三来嘛感觉这么高大上的东西可能学起来应该会很难，会花费很多时间。<br>ps：很多事情只有去尝试了才会知道难不难，很多东西你觉得难可能是因为你没有用过它，或者不知道它是用来做什么的，只有你勇敢的踏出一步去尝试用下，你就会发现其实没有那么难。(●’◡’●)<br><a id="more"></a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;初识gulp自动化构建工具。一开始只是听过这个东西，没有尝试用过。听起来好像很高大上的样子，一直想要去尝试用一下，但一直没有去用过。一来现在的项目没有用到；二来之前好像确实是挺忙的，没有找到什么合适的时间去尝试用下；三来嘛感觉这么高大上的东西可能学起来应该会很难，会花费很多时间。&lt;br&gt;ps：很多事情只有去尝试了才会知道难不难，很多东西你觉得难可能是因为你没有用过它，或者不知道它是用来做什么的，只有你勇敢的踏出一步去尝试用下，你就会发现其实没有那么难。(●’◡’●)&lt;br&gt;
+    
+    </summary>
+    
+      <category term="自动化构建工具" scheme="https://vonfly.github.io/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="gulp" scheme="https://vonfly.github.io/tags/gulp/"/>
+    
+      <category term="代码优化" scheme="https://vonfly.github.io/tags/%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96/"/>
     
   </entry>
   
