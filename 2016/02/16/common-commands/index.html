@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="命令使用," />
+  <meta name="keywords" content="命令使用,hexo," />
 
 
 
@@ -86,16 +86,16 @@
 
 
 
-<meta name="description" content="平时写博客或者做项目会用到的一些命令">
+<meta name="description" content="平时写博客会用到的一些命令">
 <meta property="og:type" content="article">
 <meta property="og:title" content="常用的一些命令">
 <meta property="og:url" content="https://vonfly.github.io/2016/02/16/common-commands/index.html">
 <meta property="og:site_name" content="编程、人生">
-<meta property="og:description" content="平时写博客或者做项目会用到的一些命令">
-<meta property="og:updated_time" content="2017-02-18T01:23:40.146Z">
+<meta property="og:description" content="平时写博客会用到的一些命令">
+<meta property="og:updated_time" content="2017-02-20T12:16:02.027Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用的一些命令">
-<meta name="twitter:description" content="平时写博客或者做项目会用到的一些命令">
+<meta name="twitter:description" content="平时写博客会用到的一些命令">
 
 
 
@@ -340,6 +340,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/命令/" itemprop="url" rel="index">
+                    <span itemprop="name">命令</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -380,7 +402,7 @@
       
 
       
-        <p>平时写博客或者做项目会用到的一些命令<br><a id="more"></a></p>
+        <p>平时写博客会用到的一些命令<br><a id="more"></a></p>
 <h3 id="hexo命令"><a href="#hexo命令" class="headerlink" title="hexo命令"></a>hexo命令</h3><p>init 新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init [folder]</div></pre></td></tr></table></figure></p>
 <p>new 新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new [layout] &lt;title&gt;</div></pre></td></tr></table></figure></p>
 <p>generate 生成网站(即生成静态文件)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure></p>
@@ -446,66 +468,7 @@
 <p>clean 清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div></pre></td></tr></table></figure></p>
 <p>version 显示 Hexo 版本。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo version</div></pre></td></tr></table></figure></p>
 <p>安装 Hexo Algolia 扩展（用于页面搜索）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-algolia@0.2.0</div></pre></td></tr></table></figure></p>
-<h3 id="git一些命令"><a href="#git一些命令" class="headerlink" title="git一些命令"></a>git一些命令</h3><p>在当前目录新建一个Git代码库<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git init</div></pre></td></tr></table></figure></p>
-<p>新建一个目录，将其初始化为Git代码库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git init [project-name]</div></pre></td></tr></table></figure>
-<p>下载一个项目和它的整个代码历史</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> [url]</div></pre></td></tr></table></figure>
-<h4 id="增加-删除文件"><a href="#增加-删除文件" class="headerlink" title="增加/删除文件"></a>增加/删除文件</h4><p>添加指定文件到暂存区<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git add [file1] [file2] ...</div></pre></td></tr></table></figure></p>
-<p>添加指定目录到暂存区，包括子目录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git add [dir]</div></pre></td></tr></table></figure></p>
-<p>将所有修改过的工作文件提交暂存区<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ add .</div></pre></td></tr></table></figure></p>
-<p>添加每个变化前，都会要求确认，<br>对于同一个文件的多处变化，可以实现分次提交<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git add -p</div></pre></td></tr></table></figure></p>
-<p>删除暂存区文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git rm file.name</div></pre></td></tr></table></figure></p>
-<p>(工作区和暂存区都存在的情况下)删除工作区文件，同时删除暂存区文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git rm <span class="_">-f</span> file.name</div></pre></td></tr></table></figure></p>
-<p>(工作区和暂存区都存在的情况下)不删除工作区文件，删除暂存区文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git rm --cached file.name</div></pre></td></tr></table></figure></p>
-<p>改名文件，并且将这个改名放入暂存区<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git mv [file-original] [file-renamed]</div></pre></td></tr></table></figure></p>
-<h4 id="代码提交"><a href="#代码提交" class="headerlink" title="代码提交"></a>代码提交</h4><p>提交暂存区到仓库区（提交说明要用英文引号）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git commit -m [提交说明]</div></pre></td></tr></table></figure></p>
-<p>提交暂存区到仓库区<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git commit [file1] [file2] ... -m [提交说明]</div></pre></td></tr></table></figure></p>
-<h4 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h4><p>列出所有本地分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git branch</div></pre></td></tr></table></figure></p>
-<p>列出所有远程分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git branch -r</div></pre></td></tr></table></figure></p>
-<p>列出所有本地分支和远程分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git branch <span class="_">-a</span></div></pre></td></tr></table></figure></p>
-<p>新建一个分支，但依然停留在当前分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git branch [branch-name]</div></pre></td></tr></table></figure></p>
-<p>新建一个分支，并切换到该分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git checkout -b [branch]</div></pre></td></tr></table></figure></p>
-<p>新建一个分支，指向指定commit<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git branch [branch] [commit]</div></pre></td></tr></table></figure></p>
-<p>新建一个分支，与指定的远程分支建立追踪关系<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git branch --track [branch] [remote-branch]</div></pre></td></tr></table></figure></p>
-<p>切换到指定分支，并更新工作区<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git checkout [branch-name]</div></pre></td></tr></table></figure></p>
-<p>切换到上一个分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git checkout -</div></pre></td></tr></table></figure></p>
-<p>建立追踪关系，在现有分支与指定的远程分支之间<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git branch --set-upstream [branch] [remote-branch]</div></pre></td></tr></table></figure></p>
-<p>合并指定分支到当前分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git merge [branch]</div></pre></td></tr></table></figure></p>
-<p>选择一个commit，合并进当前分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git cherry-pick [commit]</div></pre></td></tr></table></figure></p>
-<p>删除分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git branch <span class="_">-d</span> [branch-name]</div></pre></td></tr></table></figure></p>
-<p>删除远程分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git push origin --delete [branch-name]</div><div class="line">$ git branch -dr [remote/branch]</div></pre></td></tr></table></figure></p>
-<h4 id="查看信息"><a href="#查看信息" class="headerlink" title="查看信息"></a>查看信息</h4><p>显示有变更的文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git status</div></pre></td></tr></table></figure></p>
-<p>显示当前分支的版本历史<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">log</span></div></pre></td></tr></table></figure></p>
-<p>显示之后版本历史<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git reflog</div></pre></td></tr></table></figure></p>
-<p>显示commit历史，以及每次commit发生变更的文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">log</span> --stat</div></pre></td></tr></table></figure></p>
-<p>搜索提交历史，根据关键词<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">log</span> -S [keyword]</div></pre></td></tr></table></figure></p>
-<p>显示某个文件的版本历史，包括文件改名<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">log</span> --follow [file]</div><div class="line">$ git whatchanged [file]</div></pre></td></tr></table></figure></p>
-<p>显示指定文件相关的每一次diff<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">log</span> -p [file]</div></pre></td></tr></table></figure></p>
-<p>显示过去5次提交<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">log</span> -5 --pretty --oneline</div></pre></td></tr></table></figure></p>
-<p>显示指定文件是什么人在什么时间修改过<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git blame [file]</div></pre></td></tr></table></figure></p>
-<p>显示暂存区和工作区的差异<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git diff</div></pre></td></tr></table></figure></p>
-<p>显示暂存区和上一个commit的差异<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git diff --cached [file]</div></pre></td></tr></table></figure></p>
-<p>显示工作区与当前分支最新commit之间的差异<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git diff HEAD</div></pre></td></tr></table></figure></p>
-<p>显示两次提交之间的差异<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git diff [first-branch]...[second-branch]</div></pre></td></tr></table></figure></p>
-<h4 id="远程同步"><a href="#远程同步" class="headerlink" title="远程同步"></a>远程同步</h4><p>下载远程仓库的所有变动<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git fetch [remote]</div></pre></td></tr></table></figure></p>
-<p>显示所有远程仓库<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git remote -v</div></pre></td></tr></table></figure></p>
-<p>显示某个远程仓库的信息<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git remote show [remote]</div></pre></td></tr></table></figure></p>
-<p>增加一个新的远程仓库，并命名<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git remote add [shortname] [url]</div></pre></td></tr></table></figure></p>
-<p>取回远程仓库的变化，并与本地分支合并<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git pull [remote] [branch]</div></pre></td></tr></table></figure></p>
-<p>上传本地指定分支到远程仓库<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git push [remote] [branch]</div></pre></td></tr></table></figure></p>
-<p>推送所有分支到远程仓库<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git push [remote] --all</div></pre></td></tr></table></figure></p>
-<h4 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h4><p>恢复暂存区的指定文件到工作区<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git checkout [file]</div></pre></td></tr></table></figure></p>
-<p>恢复某个commit的指定文件到暂存区和工作区<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git checkout [commit] [file]</div></pre></td></tr></table></figure></p>
-<p>恢复暂存区的所有文件到工作区<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git checkout .</div></pre></td></tr></table></figure></p>
-<h5 id="整个版本的撤销"><a href="#整个版本的撤销" class="headerlink" title="整个版本的撤销"></a>整个版本的撤销</h5><p>重置暂存区的指定文件，与上一次commit保持一致，但工作区不变<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git reset [file]</div></pre></td></tr></table></figure></p>
-<p>重置暂存区与工作区，与上一次commit保持一致<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git reset --hard [commit]</div></pre></td></tr></table></figure></p>
-<h4 id="显示当前的Git配置"><a href="#显示当前的Git配置" class="headerlink" title="显示当前的Git配置"></a>显示当前的Git配置</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git config --list</div></pre></td></tr></table></figure>
-<p>编辑Git配置文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git config <span class="_">-e</span> [--global]</div></pre></td></tr></table></figure></p>
-<p>设置提交代码时的用户信息<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git config [--global] user.name <span class="string">"your username"</span></div><div class="line">$ git config [--global] user.email <span class="string">"your e-mail"</span></div></pre></td></tr></table></figure></p>
-<h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><h4 id="多人协作解决冲突"><a href="#多人协作解决冲突" class="headerlink" title="多人协作解决冲突"></a>多人协作解决冲突</h4><p>推荐方法1：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git fetch</div><div class="line">$ git diff master origin/master</div><div class="line">$ git merge orgin/master</div></pre></td></tr></table></figure></p>
-<p>方法2：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git pull</div></pre></td></tr></table></figure></p>
-<p>参考：<br><a href="http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html" target="_blank" rel="external">阮一峰-常用 Git 命令清单</a></p>
+<p>来更新 Index（相当于把博客下的文章更新到algolia数据库）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo algolia</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -551,6 +514,8 @@
         <div class="post-tags">
           
             <a href="/tags/命令使用/" rel="tag"># 命令使用</a>
+          
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
           
         </div>
       
@@ -664,7 +629,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -673,7 +638,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -682,7 +647,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -749,7 +714,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo命令"><span class="nav-number">1.</span> <span class="nav-text">hexo命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git一些命令"><span class="nav-number">2.</span> <span class="nav-text">git一些命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#增加-删除文件"><span class="nav-number">2.1.</span> <span class="nav-text">增加/删除文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码提交"><span class="nav-number">2.2.</span> <span class="nav-text">代码提交</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分支"><span class="nav-number">2.3.</span> <span class="nav-text">分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看信息"><span class="nav-number">2.4.</span> <span class="nav-text">查看信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#远程同步"><span class="nav-number">2.5.</span> <span class="nav-text">远程同步</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#撤销"><span class="nav-number">2.6.</span> <span class="nav-text">撤销</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#整个版本的撤销"><span class="nav-number">2.6.1.</span> <span class="nav-text">整个版本的撤销</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#显示当前的Git配置"><span class="nav-number">2.7.</span> <span class="nav-text">显示当前的Git配置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展"><span class="nav-number">3.</span> <span class="nav-text">扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#多人协作解决冲突"><span class="nav-number">3.1.</span> <span class="nav-text">多人协作解决冲突</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo命令"><span class="nav-number">1.</span> <span class="nav-text">hexo命令</span></a></li></ol></div>
             
 
           </div>
