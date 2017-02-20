@@ -200,9 +200,36 @@
     <link href="https://vonfly.github.io/2016/11/02/gulp/"/>
     <id>https://vonfly.github.io/2016/11/02/gulp/</id>
     <published>2016-11-02T15:40:09.000Z</published>
-    <updated>2017-02-20T12:26:56.102Z</updated>
+    <updated>2017-02-20T13:08:58.802Z</updated>
     
     <content type="html"><![CDATA[<p>初识gulp自动化构建工具。一开始只是听过这个东西，没有尝试用过。听起来好像很高大上的样子，一直想要去尝试用一下，但一直没有去用过。一来现在的项目没有用到；二来之前好像确实是挺忙的，没有找到什么合适的时间去尝试用下；三来嘛感觉这么高大上的东西可能学起来应该会很难，会花费很多时间。<br>ps：很多事情只有去尝试了才会知道难不难，很多东西你觉得难可能是因为你没有用过它，或者不知道它是用来做什么的，只有你勇敢的踏出一步去尝试用下，你就会发现其实没有那么难。(●’◡’●)<br><a id="more"></a></p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>通过代码优于配置的策略，Gulp 让简单的任务简单，复杂的任务可管理。<br>利用 Node.js 流的威力，你可以快速构建项目并减少频繁的 IO 操作。<br>Gulp 严格的插件指南确保插件如你期望的那样简洁高质得工作。<br>通过最少的 API，掌握 Gulp 毫不费力，构建工作尽在掌握：如同一系列流管道。</p>
+<h2 id="入门指南"><a href="#入门指南" class="headerlink" title="入门指南"></a>入门指南</h2><ol>
+<li><p>全局安装 gulp：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install --global gulp</div></pre></td></tr></table></figure>
+</li>
+<li><p>作为项目的开发依赖（devDependencies）安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install --save-dev gulp</div></pre></td></tr></table></figure>
+</li>
+<li><p>在项目根目录下创建一个名为 gulpfile.js 的文件：<br>var gulp = require(‘gulp’);</p>
+</li>
+</ol>
+<p>gulp.task(‘default’, function() {<br>  // 将你的默认的任务代码放在这<br>});</p>
+<ol>
+<li>运行 gulp：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gulp default</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="常用的一些插件"><a href="#常用的一些插件" class="headerlink" title="常用的一些插件"></a>常用的一些插件</h2><blockquote>
+<ul>
+<li>gulp-minify-css    压缩css</li>
+<li>gulp-uglify    压缩js</li>
+<li>gulp-htmlmin    压缩html</li>
+<li>gulp-imagemin    压缩图片<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install [plugins-name] --save</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<p>上述命令安装插件的同时也会把插件作为项目依赖写入package.json文件.</p>
+<p>参考：<br><a href="http://gulpjs.com/" target="_blank" rel="external">guly官网(包含插件搜索)</a><br><a href="http://www.gulpjs.com.cn/" target="_blank" rel="external">guly中文网站</a></p>
 ]]></content>
     
     <summary type="html">
