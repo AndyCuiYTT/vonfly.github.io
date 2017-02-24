@@ -88,15 +88,15 @@
 
 <meta name="description" content="sublime使用技巧，平时用的时候觉得不错的功能就会把它分享给大家(●’◡’●)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sublime使用技巧-持续更新">
+<meta property="og:title" content="Sublime使用技巧">
 <meta property="og:url" content="https://vonfly.github.io/2017/02/17/sublime/index.html">
 <meta property="og:site_name" content="编程、人生">
 <meta property="og:description" content="sublime使用技巧，平时用的时候觉得不错的功能就会把它分享给大家(●’◡’●)">
 <meta property="og:image" content="http://olixffhc0.bkt.clouddn.com/sublime2.jpg">
 <meta property="og:image" content="http://olixffhc0.bkt.clouddn.com/sublime1.jpg">
-<meta property="og:updated_time" content="2017-02-20T12:22:55.816Z">
+<meta property="og:updated_time" content="2017-02-24T12:30:05.382Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sublime使用技巧-持续更新">
+<meta name="twitter:title" content="Sublime使用技巧">
 <meta name="twitter:description" content="sublime使用技巧，平时用的时候觉得不错的功能就会把它分享给大家(●’◡’●)">
 <meta name="twitter:image" content="http://olixffhc0.bkt.clouddn.com/sublime2.jpg">
 
@@ -132,7 +132,7 @@
 
 
 
-  <title> sublime使用技巧-持续更新 | 编程、人生 </title>
+  <title> Sublime使用技巧 | 编程、人生 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -317,7 +317,7 @@
             
             
               
-                sublime使用技巧-持续更新
+                Sublime使用技巧
               
             
           </h1>
@@ -412,6 +412,10 @@
 <p>window如何查看软件安装目录，如下图说明：<br><img src="http://olixffhc0.bkt.clouddn.com/sublime2.jpg" alt="window如何查看软件安装目录"></p>
 <p>选中上一步建好的文件command，然后双击右边的默认，把上边的内容复制进去即可。如下图说明<br><img src="http://olixffhc0.bkt.clouddn.com/sublime1.jpg" alt="sublime1"></p>
 <p>随便找个文件sublime能够识别的文件，鼠标右击就可以看到刚刚添加的快捷键了，可以直接打开</p>
+<h2 id="Sublime-text-2-3-中-Package-Control-的安装与使用方法"><a href="#Sublime-text-2-3-中-Package-Control-的安装与使用方法" class="headerlink" title="Sublime text 2/3 中 Package Control 的安装与使用方法"></a>Sublime text 2/3 中 Package Control 的安装与使用方法</h2><p>从菜单 View - Show Console 或者 ctrl + ~ 快捷键，调出 console。<br>将以下 Python 代码粘贴进去并 enter 执行，不出意外即完成安装。<br>以下提供 ST3 和 ST2 的安装代码：</p>
+<p>Sublime Text 3：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> urllib.request,os; pf = <span class="string">'Package Control.sublime-package'</span>; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), <span class="string">'wb'</span>).write(urllib.request.urlopen( <span class="string">'http://sublime.wbond.net/'</span> + pf.replace(<span class="string">' '</span>,<span class="string">'%20'</span>)).read())</div></pre></td></tr></table></figure></p>
+<p>Sublime Text 2：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> urllib2,os; pf=<span class="string">'Package Control.sublime-package'</span>; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(ipp) <span class="keyword">else</span> <span class="keyword">None</span>; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler( ))); open( os.path.join( ipp, pf), <span class="string">'wb'</span> ).write( urllib2.urlopen( <span class="string">'http://sublime.wbond.net/'</span> +pf.replace( <span class="string">' '</span>,<span class="string">'%20'</span> )).read()); print( <span class="string">'Please restart Sublime Text to finish installation'</span>)</div></pre></td></tr></table></figure></p>
+<p>常用的一些插件：<br>AdvancedNewFile        快速创建新文件<br>Better Completion    全能代码提示(需要自己配置一下插件，需要提示的库)<br>CodeFormatter        代码格式化<br>ConverToUTF8    支持 GBK, BIG5, EUC-KR, EUC-JP, Shift_JIS 等编码的插件<br>DocBlockr        代码块注释<br>Emmet<br>File Header    自动更新保存时间，文件模板<br>Side Bar<br>Monokai Extended    主题配置<br>SideBarEnhancements    增强型侧边栏</p>
 
       
     </div>
@@ -491,7 +495,7 @@
     <div class="post-spread">
       
         <div class="ds-share flat" data-thread-key="2017/02/17/sublime/"
-     data-title="sublime使用技巧-持续更新"
+     data-title="Sublime使用技巧"
      data-content=""
      data-url="https://vonfly.github.io/2017/02/17/sublime/">
   <div class="ds-share-inline">
@@ -521,7 +525,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/02/17/sublime/"
-           data-title="sublime使用技巧-持续更新" data-url="https://vonfly.github.io/2017/02/17/sublime/">
+           data-title="Sublime使用技巧" data-url="https://vonfly.github.io/2017/02/17/sublime/">
       </div>
     
   </div>
@@ -653,7 +657,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#sublime右键快捷方式添加"><span class="nav-number">1.</span> <span class="nav-text">sublime右键快捷方式添加</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#sublime右键快捷方式添加"><span class="nav-number">1.</span> <span class="nav-text">sublime右键快捷方式添加</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sublime-text-2-3-中-Package-Control-的安装与使用方法"><span class="nav-number">2.</span> <span class="nav-text">Sublime text 2/3 中 Package Control 的安装与使用方法</span></a></li></ol></div>
             
 
           </div>
