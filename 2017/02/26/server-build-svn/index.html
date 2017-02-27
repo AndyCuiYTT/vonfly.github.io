@@ -97,7 +97,7 @@
 <meta property="og:image" content="http://olixffhc0.bkt.clouddn.com/server_svn3.jpg">
 <meta property="og:image" content="http://olixffhc0.bkt.clouddn.com/server_svn4.jpg">
 <meta property="og:image" content="http://olixffhc0.bkt.clouddn.com/server_svn5.jpg">
-<meta property="og:updated_time" content="2017-02-27T12:59:15.002Z">
+<meta property="og:updated_time" content="2017-02-27T13:07:10.314Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建SVN服务器">
 <meta name="twitter:description" content="在 Centos5.5 上搭建SVN服务器并实现自动同步至web目录。">
@@ -431,7 +431,7 @@
 <h2 id="本地commit时自动同步到web目录"><a href="#本地commit时自动同步到web目录" class="headerlink" title="本地commit时自动同步到web目录"></a>本地commit时自动同步到web目录</h2><p>实现本地更新同步到服务器项目：配置项目仓库的钩子配置,可以把钩子看成是WEB项目于SVN项目仓库之间的一个关联，通过向SVN项目仓库提交脚本代码，利用钩子shell脚本可以自动向web项目中将脚本文件更新过去</p>
 <h3 id="进入-var-svn-project-hooks下，建立post-commit文件"><a href="#进入-var-svn-project-hooks下，建立post-commit文件" class="headerlink" title="进入/var/svn/project/hooks下，建立post-commit文件"></a>进入/var/svn/project/hooks下，建立post-commit文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /var/svn/project/hooks</div><div class="line">vim post-commit</div></pre></td></tr></table></figure>
 <p>在该文件里添加如下代码：</p>
-<p>#!/bin/sh<br>export LANG=zh_CN.UTF-8<br>SVN_PATH=/usr/bin/svn   //这里不用改<br>WEB_PATH=/www/test  //对应自己web目录<br>//这里的用户随便一个就好<br>$SVN_PATH update $WEB_PATH –username ‘lsgoweb1’ –password ‘lsgoweb1’ –no-auth-cache</p>
+<p>#!/bin/sh<br>export LANG=zh_CN.UTF-8<br>SVN_PATH=/usr/bin/svn   //这里不用改<br>WEB_PATH=/www/test  //对应自己web目录<br>//这里的用户随便一个就好<br>$SVN_PATH update $WEB_PATH –username ‘vonfly’ –password ‘vonfly’ –no-auth-cache</p>
 <p><img src="http://olixffhc0.bkt.clouddn.com/server_svn5.jpg" alt="post-commit"></p>
 <h3 id="给post-commit-执行权限"><a href="#给post-commit-执行权限" class="headerlink" title="给post-commit 执行权限"></a>给post-commit 执行权限</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chmod 755 post-commit</div></pre></td></tr></table></figure>
       
