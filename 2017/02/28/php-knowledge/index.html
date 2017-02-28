@@ -1,0 +1,945 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="面试,理论知识," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="编程、人生" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="本页面主要用于编写一些理论知识，从网上找的或者自己总结的都会有。(●’◡’●)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="收集、总结的一些PHP理论知识（对于面试有帮助）">
+<meta property="og:url" content="https://vonfly.github.io/2017/02/28/php-knowledge/index.html">
+<meta property="og:site_name" content="编程、人生">
+<meta property="og:description" content="本页面主要用于编写一些理论知识，从网上找的或者自己总结的都会有。(●’◡’●)">
+<meta property="og:updated_time" content="2017-02-28T11:46:23.185Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="收集、总结的一些PHP理论知识（对于面试有帮助）">
+<meta name="twitter:description" content="本页面主要用于编写一些理论知识，从网上找的或者自己总结的都会有。(●’◡’●)">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6378418750034544000',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: 'H5HW68BKTS',
+      apiKey: '06184ff013b323c4548ebcbe198c87a9',
+      indexName: 'vonfly_dong',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"输入关键字","hits_empty":"没有找到与[ ${query} ] 相关的内容，请输入其他关键字搜索","hits_stats":"${hits} 条相关记录，共耗时 ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://vonfly.github.io/2017/02/28/php-knowledge/"/>
+
+
+
+
+
+  <title> 收集、总结的一些PHP理论知识（对于面试有帮助） | 编程、人生 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">编程、人生</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle">前端 | 后台 | linux</p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://vonfly.github.io/2017/02/28/php-knowledge/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="阿东">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/my-avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="编程、人生">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="编程、人生" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                收集、总结的一些PHP理论知识（对于面试有帮助）
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-28T19:43:19+08:00">
+                2017-02-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/PHP/" itemprop="url" rel="index">
+                    <span itemprop="name">PHP</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/28/php-knowledge/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/28/php-knowledge/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本页面主要用于编写一些理论知识，从网上找的或者自己总结的都会有。(●’◡’●)</p>
+<a id="more"></a>
+<h4 id="用最少的代码写一个求3值最大值的函数"><a href="#用最少的代码写一个求3值最大值的函数" class="headerlink" title="用最少的代码写一个求3值最大值的函数"></a>用最少的代码写一个求3值最大值的函数</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span><span class="params">($a,$b,$c)</span></span>&#123;</div><div class="line">	<span class="keyword">return</span> $a &gt; $b ? ($a &gt; $c ? $a : $c) : ($b &gt; $c ? $b : $c);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="用PHP打印出前一天的时间，打印格式是2007年5月10日22-21-21"><a href="#用PHP打印出前一天的时间，打印格式是2007年5月10日22-21-21" class="headerlink" title="用PHP打印出前一天的时间，打印格式是2007年5月10日22:21:21"></a>用PHP打印出前一天的时间，打印格式是2007年5月10日22:21:21</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">echo</span> date(<span class="string">'Y-m-d H:i:s'</span>, strtotime(<span class="string">'-1 day'</span>));</div></pre></td></tr></table></figure>
+<h4 id="输出正在浏览当前页面用户的IP地址"><a href="#输出正在浏览当前页面用户的IP地址" class="headerlink" title="输出正在浏览当前页面用户的IP地址"></a>输出正在浏览当前页面用户的IP地址</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">echo</span> $_SERVER[<span class="string">"REMOTE_ADDR"</span>];</div></pre></td></tr></table></figure>
+<h4 id="查询（query）的字符串URL中第一个问号-之后的内容（比如http-localhost-text-php-id-1-amp-bi-2，查询出-id-1-amp-bi-2-）"><a href="#查询（query）的字符串URL中第一个问号-之后的内容（比如http-localhost-text-php-id-1-amp-bi-2，查询出-id-1-amp-bi-2-）" class="headerlink" title="查询（query）的字符串URL中第一个问号 ? 之后的内容（比如http://localhost/text.php?id=1&amp;bi=2，查询出 id=1&amp;bi=2 ）"></a>查询（query）的字符串URL中第一个问号 ? 之后的内容（比如<a href="http://localhost/text.php?id=1&amp;bi=2，查询出" target="_blank" rel="external">http://localhost/text.php?id=1&amp;bi=2，查询出</a> id=1&amp;bi=2 ）</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">echo</span> $_SERVER[<span class="string">"QUERY_STRING"</span>];</div></pre></td></tr></table></figure>
+<h4 id="当前运行脚本所在的文档根目录"><a href="#当前运行脚本所在的文档根目录" class="headerlink" title="当前运行脚本所在的文档根目录"></a>当前运行脚本所在的文档根目录</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">echo</span> $_SERVER[<span class="string">"DOCUMENT_ROOT"</span>];</div></pre></td></tr></table></figure>
+<h4 id="写一个函数，能够遍历一个文件夹下的所有文件和子文件夹"><a href="#写一个函数，能够遍历一个文件夹下的所有文件和子文件夹" class="headerlink" title="写一个函数，能够遍历一个文件夹下的所有文件和子文件夹"></a>写一个函数，能够遍历一个文件夹下的所有文件和子文件夹</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">my_scandir</span><span class="params">($dir)</span></span></div><div class="line">&#123;</div><div class="line">	$files=<span class="keyword">array</span>();</div><div class="line">	<span class="keyword">if</span>(is_dir($dir))</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span>($handle=opendir($dir))</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">while</span>(($file=readdir($handle))!==<span class="keyword">false</span>)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">if</span>($file!=<span class="string">"."</span> &amp;&amp; $file!=<span class="string">".."</span>)</div><div class="line">				&#123;</div><div class="line">					<span class="keyword">if</span>(is_dir($dir.<span class="string">"/"</span>.$file))</div><div class="line">					&#123;</div><div class="line">						$files[$file]=my_scandir($dir.<span class="string">"/"</span>.$file);</div><div class="line">					&#125;</div><div class="line">					<span class="keyword">else</span></div><div class="line">					&#123;</div><div class="line">						$files[]=$dir.<span class="string">"/"</span>.$file;</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			closedir($handle);</div><div class="line">			<span class="keyword">return</span> $files;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">var_dump(my_scandir(<span class="string">"F:ali"</span>));</div></pre></td></tr></table></figure>
+<h4 id="请用正则表达式（Regular-Expression）验证电子邮件的格式是否正确。"><a href="#请用正则表达式（Regular-Expression）验证电子邮件的格式是否正确。" class="headerlink" title="请用正则表达式（Regular Expression）验证电子邮件的格式是否正确。"></a>请用正则表达式（Regular Expression）验证电子邮件的格式是否正确。</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$email = <span class="string">'1185236@163.com'</span>;</div><div class="line"><span class="keyword">if</span>( !preg_match(<span class="string">'/^[\w.]+@([\w.]+)\.[a-z]&#123;2,6&#125;$/i'</span>, $email) )</div><div class="line">&#123;</div><div class="line">	<span class="keyword">echo</span> <span class="string">"电子邮件格式不正确！"</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">else</span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">echo</span> <span class="string">"电子邮件格式正确！"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="用PHP写出显示客户端IP与服务器IP的代码"><a href="#用PHP写出显示客户端IP与服务器IP的代码" class="headerlink" title="用PHP写出显示客户端IP与服务器IP的代码"></a>用PHP写出显示客户端IP与服务器IP的代码</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">echo</span> $_SERVER[<span class="string">"REMOTE_ADDR"</span>];		<span class="comment">//客户端IP</span></div><div class="line"><span class="keyword">echo</span> gethostbyname(<span class="string">"www.baidu.com"</span>);	<span class="comment">//服务器IP</span></div></pre></td></tr></table></figure>
+<h4 id="如何修改SESSION的生存时间"><a href="#如何修改SESSION的生存时间" class="headerlink" title="如何修改SESSION的生存时间"></a>如何修改SESSION的生存时间</h4><p>方法1：将php.ini中的session.gc_maxlifetime设置为9999重启apache</p>
+<p>方法2：在当前项目中修改<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$expire = <span class="number">3600</span> * <span class="number">3</span>;</div><div class="line">ini_set(<span class="string">'session.gc_maxlifetime'</span>, $expire);</div><div class="line">ini_set(<span class="string">'session.cookie_lifetime'</span>, $expire);</div></pre></td></tr></table></figure></p>
+<h4 id="有一个网页地址-比如百度主页-http-www-baidu-com-如何得到它的内容"><a href="#有一个网页地址-比如百度主页-http-www-baidu-com-如何得到它的内容" class="headerlink" title="有一个网页地址, 比如百度主页: http://www.baidu.com/,如何得到它的内容?"></a>有一个网页地址, 比如百度主页: <a href="http://www.baidu.com/,如何得到它的内容?" target="_blank" rel="external">http://www.baidu.com/,如何得到它的内容?</a></h4><p>方法1：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$readcontents = fopen(<span class="string">"http://www.baidu.com/"</span>, <span class="string">"rb"</span>);</div><div class="line">$contents = stream_get_contents($readcontents);</div><div class="line">fclose($readcontents);</div><div class="line"><span class="keyword">echo</span> $contents;</div></pre></td></tr></table></figure></p>
+<p>方法2：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$readcontents = file_get_contents(<span class="string">"http://www.baidu.com/"</span>);</div><div class="line"><span class="keyword">echo</span> $readcontents;</div></pre></td></tr></table></figure></p>
+<h4 id="请说明php中传值与传引用的区别。什么时候传值什么时候传引用"><a href="#请说明php中传值与传引用的区别。什么时候传值什么时候传引用" class="headerlink" title="请说明php中传值与传引用的区别。什么时候传值什么时候传引用?"></a>请说明php中传值与传引用的区别。什么时候传值什么时候传引用?</h4><p>按值传递：函数范围内对值的任何改变在函数外部都会被忽略</p>
+<p>按引用传递：函数范围内对值的任何改变在函数外部也能反映出这些修改</p>
+<p>优缺点：按值传递时，php必须复制值。特别是对于大型的字符串和对象来说，这将会是一个代价很大的操作。</p>
+<p>按引用传递则不需要复制值，对于性能提高很有好处。</p>
+<h4 id="写一个函数，尽可能高效的，从一个标准-url-里取出文件的扩展名"><a href="#写一个函数，尽可能高效的，从一个标准-url-里取出文件的扩展名" class="headerlink" title="写一个函数，尽可能高效的，从一个标准 url 里取出文件的扩展名"></a>写一个函数，尽可能高效的，从一个标准 url 里取出文件的扩展名</h4><p>例如: <a href="http://www.sina.com.cn/abc/de/fg.php?id=1" target="_blank" rel="external">http://www.sina.com.cn/abc/de/fg.php?id=1</a> 需要取出 php 或 .php<br>方法1：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getExt</span><span class="params">($url)</span></span>&#123;</div><div class="line">	$arr = parse_url($url);</div><div class="line">	$file = basename($arr[<span class="string">'path'</span>]);</div><div class="line">	$ext = explode(<span class="string">"."</span>, $file);</div><div class="line">	<span class="keyword">return</span> $ext[<span class="number">1</span>];</div><div class="line">&#125;</div><div class="line"><span class="keyword">echo</span> getExt(<span class="string">'http://www.sina.com.cn/abc/de/fg.php?id=1'</span>);</div></pre></td></tr></table></figure></p>
+<p>方法2：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getExt</span><span class="params">($url)</span> </span>&#123;</div><div class="line">	$url = basename($url);</div><div class="line">	$pos1 = strpos($url, <span class="string">"."</span>);</div><div class="line">	$pos2 = strpos($url, <span class="string">"?"</span>);</div><div class="line">	$length = $pos2 - $pos1 - <span class="number">1</span>;</div><div class="line">	<span class="keyword">if</span>(strstr($url, <span class="string">"?"</span>))&#123;</div><div class="line">		<span class="keyword">return</span> substr($url, $pos1 + <span class="number">1</span>, $length);</div><div class="line">	&#125; <span class="keyword">else</span> &#123;</div><div class="line">		<span class="keyword">return</span> substr($url, $pos1);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">echo</span> getExt(<span class="string">'http://www.sina.com.cn/abc/de/fg.php?id=1'</span>);</div></pre></td></tr></table></figure></p>
+<h4 id="使用五种以上方式获取一个文件的扩展名"><a href="#使用五种以上方式获取一个文件的扩展名" class="headerlink" title="使用五种以上方式获取一个文件的扩展名"></a>使用五种以上方式获取一个文件的扩展名</h4><p>要求：dir/upload.image.jpg，找出 .jpg 或者 jpg ，<br>必须使用PHP自带的处理函数进行处理，方法不能明显重复，可以封装成函数，比如 get_ext1($file_name), get_ext2($file_name)</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$file_name = <span class="string">'dir/upload.image.jpg'</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_ext1</span><span class="params">($file_name)</span></span>&#123;</div><div class="line">	<span class="keyword">return</span> strrchr($file_name, <span class="string">'.'</span>);</div><div class="line">&#125;</div><div class="line"><span class="keyword">echo</span> get_ext1($file_name);</div></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$file_name = <span class="string">'dir/upload.image.jpg'</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_ext2</span><span class="params">($file_name)</span></span>&#123;</div><div class="line">	<span class="keyword">return</span> substr( $file_name, strrpos($file_name, <span class="string">'.'</span>) );</div><div class="line">&#125;</div><div class="line"><span class="keyword">echo</span> get_ext2($file_name);</div></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$file_name = <span class="string">'dir/upload/image.jpg'</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_ext3</span><span class="params">($file_name)</span></span>&#123;</div><div class="line">	$stack = explode(<span class="string">'.'</span>, $file_name);</div><div class="line">	$fruit = array_pop($stack);</div><div class="line">	<span class="keyword">return</span> $fruit;</div><div class="line">&#125;</div><div class="line"><span class="keyword">echo</span> get_ext3($file_name);</div></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$file_name = <span class="string">'dir/upload/image.jpg'</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_ext4</span><span class="params">($file_name)</span></span>&#123;</div><div class="line">	$p = pathinfo($file_name);</div><div class="line">	<span class="keyword">return</span> $p[<span class="string">'extension'</span>];</div><div class="line">&#125;</div><div class="line"><span class="keyword">echo</span> get_ext4($file_name);</div></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$file_name = <span class="string">'dir/upload/image.jpg'</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_ext5</span><span class="params">($file_name)</span></span>&#123;</div><div class="line"></div><div class="line"><span class="keyword">return</span> strrev(substr(strrev($file_name), <span class="number">0</span>, strpos(strrev($file_name), <span class="string">'.'</span>)));</div><div class="line"></div><div class="line">&#125;</div><div class="line"><span class="keyword">echo</span> get_ext5($file_name);</div></pre></td></tr></table></figure>
+<h4 id="输出以下值"><a href="#输出以下值" class="headerlink" title="输出以下值"></a>输出以下值</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">$str1 = <span class="keyword">null</span>;</div><div class="line">$str2 = <span class="keyword">false</span>;</div><div class="line"><span class="keyword">echo</span> $str1==$str2 ? <span class="string">'相等'</span> : <span class="string">'不相等'</span>;</div><div class="line"><span class="comment">//输出相等</span></div><div class="line"></div><div class="line">$str3 = <span class="string">''</span>;</div><div class="line">$str4 = <span class="number">0</span>;</div><div class="line"><span class="keyword">echo</span> $str3==$str4 ? <span class="string">'相等'</span> : <span class="string">'不相等'</span>;</div><div class="line"><span class="comment">//输出相等</span></div><div class="line"></div><div class="line">$str5 = <span class="number">0</span>;</div><div class="line">$str6 = <span class="string">'0'</span>;</div><div class="line"><span class="keyword">echo</span> $str5===$str6 ? <span class="string">'相等'</span> : <span class="string">'不相等'</span>;</div><div class="line"><span class="comment">//输出不相等</span></div></pre></td></tr></table></figure>
+<h4 id="MySQL数据库中的字段类型varchar和char的主要区别是什么-那种字段的查找效率要高，为什么"><a href="#MySQL数据库中的字段类型varchar和char的主要区别是什么-那种字段的查找效率要高，为什么" class="headerlink" title="MySQL数据库中的字段类型varchar和char的主要区别是什么?那种字段的查找效率要高，为什么?"></a>MySQL数据库中的字段类型varchar和char的主要区别是什么?那种字段的查找效率要高，为什么?</h4><p>varchar是变长，节省存储空间，char是固定长度。查找效率要char型快，因为varchar是非定长，必须先查找长度，然后进行数据的提取，比char定长类型多了一个步骤，所以效率低一些</p>
+<h4 id="写出三种以上MySQL数据库存储引擎的名称（提示：不区分大小写）"><a href="#写出三种以上MySQL数据库存储引擎的名称（提示：不区分大小写）" class="headerlink" title="写出三种以上MySQL数据库存储引擎的名称（提示：不区分大小写）"></a>写出三种以上MySQL数据库存储引擎的名称（提示：不区分大小写）</h4><p>MyISAM、InnoDB、BDB（Berkeley DB）、Merge、Memory（Heap）、Example、Federated、Archive、CSV、Blackhole、MaxDB 等等十几个引擎</p>
+<h4 id="求两个日期的差数，例如2007-2-5-2007-3-6-的日期差数"><a href="#求两个日期的差数，例如2007-2-5-2007-3-6-的日期差数" class="headerlink" title="求两个日期的差数，例如2007-2-5 ~ 2007-3-6 的日期差数"></a>求两个日期的差数，例如2007-2-5 ~ 2007-3-6 的日期差数</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_days</span><span class="params">($date1, $date2)</span></span></div><div class="line">&#123;</div><div class="line">	$time1 = strtotime($date1);</div><div class="line">	$time2 = strtotime($date2);</div><div class="line">	<span class="keyword">return</span> abs($time2-$time1)/<span class="number">86400</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">echo</span> get_days(<span class="string">'2007-2-5'</span>, <span class="string">'2007-2-6'</span>);</div></pre></td></tr></table></figure>
+<h4 id="请写一个函数，实现以下功能："><a href="#请写一个函数，实现以下功能：" class="headerlink" title="请写一个函数，实现以下功能："></a>请写一个函数，实现以下功能：</h4><p>字符串”open_door” 转换成 “OpenDoor”、”make_by_id” 转换成 “MakeById”<br>方法一：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">str_explode</span><span class="params">($str)</span></span>&#123;</div><div class="line">	$str_arr=explode(<span class="string">"_"</span>,$str);</div><div class="line">	$str_implode=implode(<span class="string">" "</span>, $str_arr);</div><div class="line">	$str_implode=implode(<span class="string">""</span>, explode(<span class="string">" "</span>,ucwords($str_implode)));</div><div class="line">	<span class="keyword">return</span> $str_implode;</div><div class="line">&#125;</div><div class="line"><span class="keyword">echo</span> str_explode(<span class="string">'open_door'</span>);</div></pre></td></tr></table></figure></p>
+<p>方法二：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$str = <span class="string">'open_door'</span>;</div><div class="line">$expStr = explode(<span class="string">"_"</span>, $str);</div><div class="line"><span class="keyword">for</span>($i = <span class="number">0</span>; $i &lt; count($expStr); $i++)</div><div class="line">&#123;</div><div class="line">	<span class="keyword">echo</span> ucwords($expStr[$i]);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>方法三：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">echo</span> str_replace(<span class="string">' '</span>, <span class="string">''</span>, ucwords( str_replace(<span class="string">'_'</span>, <span class="string">' '</span>, <span class="string">'open_door'</span>) ) );</div></pre></td></tr></table></figure></p>
+<h4 id="echo-count-“abc”-输出什么"><a href="#echo-count-“abc”-输出什么" class="headerlink" title="echo count(“abc”); 输出什么?"></a>echo count(“abc”); 输出什么?</h4><p>答案：1<br>说明：count — 计算数组中的单元数目或对象中的属性个数<br>int count ( mixed$var [, int $mode ] ), 如果 var 不是数组类型或者实现了 Countable 接口的对象，将返回1，有一个例外，如果 var 是 NULL 则结果是 0。</p>
+<p>对于对象，如果安装了 SPL，可以通过实现 Countable 接口来调用 count()。该接口只有一个方法 count()，此方法返回 count() 函数的返回值。</p>
+<h3 id="有一个一维数组，里面存储整形数据，请写一个函数，将他们按从大到小的顺序排列。要求执行效率高。并说明如何改善执行效率。（该函数必须自己实现，不能使用php函数）"><a href="#有一个一维数组，里面存储整形数据，请写一个函数，将他们按从大到小的顺序排列。要求执行效率高。并说明如何改善执行效率。（该函数必须自己实现，不能使用php函数）" class="headerlink" title="有一个一维数组，里面存储整形数据，请写一个函数，将他们按从大到小的顺序排列。要求执行效率高。并说明如何改善执行效率。（该函数必须自己实现，不能使用php函数）"></a>有一个一维数组，里面存储整形数据，请写一个函数，将他们按从大到小的顺序排列。要求执行效率高。并说明如何改善执行效率。（该函数必须自己实现，不能使用php函数）</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">BubbleSort</span><span class="params">(&amp;$arr)</span></span></div><div class="line">&#123;</div><div class="line">	$cnt = count($arr);</div><div class="line">	$flag = <span class="number">1</span>;</div><div class="line">	<span class="keyword">for</span>($i = <span class="number">0</span>; $i &lt; $cnt; $i++)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span>($flag == <span class="number">0</span>)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">return</span>;</div><div class="line">		&#125;</div><div class="line">		$flag = <span class="number">0</span>;</div><div class="line">		<span class="keyword">for</span>($j = <span class="number">0</span>;$j &lt; $cnt-$i<span class="number">-1</span>; $j++)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">if</span>($arr[$j] &gt; $arr[$j+<span class="number">1</span>])</div><div class="line">			&#123;</div><div class="line">				$tmp = $arr[$j];</div><div class="line">				$arr[$j] = $arr[$j+<span class="number">1</span>];</div><div class="line">				$arr[$j+<span class="number">1</span>] = $tmp;</div><div class="line">				$flag = <span class="number">1</span>;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">$test=<span class="keyword">array</span>(<span class="number">1</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">2</span>,<span class="number">7</span>);</div><div class="line">BubbleSort($test);</div><div class="line">var_dump($test);</div></pre></td></tr></table></figure>
+<h4 id="请举例说明在你的开发过程中用什么方法来加快页面的加载速度"><a href="#请举例说明在你的开发过程中用什么方法来加快页面的加载速度" class="headerlink" title="请举例说明在你的开发过程中用什么方法来加快页面的加载速度"></a>请举例说明在你的开发过程中用什么方法来加快页面的加载速度</h4><p>答：要用到服务器资源时才打开，及时关闭服务器资源，数据库添加索引，页面可生成静态，图片等大文件单独服务器。使用代码优化工具</p>
+<h4 id="HTTP协议中GET、POST和HEAD的区别"><a href="#HTTP协议中GET、POST和HEAD的区别" class="headerlink" title="HTTP协议中GET、POST和HEAD的区别?"></a>HTTP协议中GET、POST和HEAD的区别?</h4><p>HEAD： 只请求页面的首部。</p>
+<p>GET： 请求指定的页面信息，并返回实体主体。</p>
+<p>POST： 请求服务器接受所指定的文档作为对所标识的URI的新的从属实体。</p>
+<p>（1）HTTP 定义了与服务器交互的不同方法，最基本的方法是 GET 和 POST。事实上 GET 适用于多数请求，而保留 POST 仅用于更新站点。</p>
+<p>（2）在FORM提交的时候，如果不指定Method，则默认为GET请 求，Form中提交的数据将会附加在url之后，以?分开与url分开。字母数字字符原样发送，但空格转换为“+“号，其它符号转换为%XX,其中XX为 该符号以16进制表示的ASCII（或ISO Latin-1）值。GET请求请提交的数据放置在HTTP请求协议头中，而POST提交的数据则放在实体数据中；</p>
+<p>GET方式提交的数据最多只能有1024字节，而POST则没有此限制。</p>
+<p>（3）GET 这个是浏览器用语向服务器请求最常用的方法。POST这个方法也是用来传送数据的，但是与GET不同的是，使用POST的时候，数据不是附在URI后面传递的，而是要做为独立的行来传递，此时还必须要发送一个Content_length标题，以标明数据长度，随后一个空白行，然后就是实际传送的数据。网页的表单通常是用POST来传送的。</p>
+<h4 id="Cookie和session的区别，禁止了cookie后session能正常使用吗-session的缺点是什么-session在服务器端是存在哪里的-是共有的还是私有的"><a href="#Cookie和session的区别，禁止了cookie后session能正常使用吗-session的缺点是什么-session在服务器端是存在哪里的-是共有的还是私有的" class="headerlink" title="Cookie和session的区别，禁止了cookie后session能正常使用吗?session的缺点是什么?session在服务器端是存在哪里的?是共有的还是私有的?"></a>Cookie和session的区别，禁止了cookie后session能正常使用吗?session的缺点是什么?session在服务器端是存在哪里的?是共有的还是私有的?</h4><p>答：<br>COOKIE保存在客户端，用户通过手段可以进行修改，不安全，单个cookie允许的最大值是3k。</p>
+<p>而SESSION保存在服务器端，相对比较安全，大小没有限制。</p>
+<p>Session依赖于cookie进行传递。</p>
+<p>禁用了cookie之后session不能正常使用。</p>
+<p>Session的缺点：保存在服务器端，每次读取都从服务器进行读取，对服务器有资源消耗。</p>
+<p>Session保存在服务器端的文件或数据库中，默认保存在文件中，文件路径由php配置文件的session.save_path指定。</p>
+<p>Session文件是公有的。</p>
+<h4 id="写几个魔术方法并说明作用"><a href="#写几个魔术方法并说明作用" class="headerlink" title="写几个魔术方法并说明作用?"></a>写几个魔术方法并说明作用?</h4><p>__call()当调用不存在的方法时会自动调用的方法</p>
+<p>__autoload()在实例化一个尚未被定义的类是会自动调用次方法来加载类文件</p>
+<p>__set()当给未定义的变量赋值时会自动调用的方法</p>
+<p>__get()当获取未定义变量的值时会自动调用的方法</p>
+<p>__construct()构造方法，实例化类时自动调用的方法</p>
+<p>__destroy()销毁对象时自动调用的方法</p>
+<p>__unset()当对一个未定义变量调用unset()时自动调用的方法</p>
+<p>__isset()当对一个未定义变量调用isset()方法时自动调用的方法</p>
+<p>__clone()克隆一个对象</p>
+<p>__tostring()当输出一个对象时自动调用的方法</p>
+<h4 id="数组中下标最好是什么类型的，为什么"><a href="#数组中下标最好是什么类型的，为什么" class="headerlink" title="数组中下标最好是什么类型的，为什么?"></a>数组中下标最好是什么类型的，为什么?</h4><p>数组的下标最好是数字类型的，数字类型的处理速度快</p>
+<h4 id="i和i-哪一个效率高，为什么"><a href="#i和i-哪一个效率高，为什么" class="headerlink" title="++i和i++哪一个效率高，为什么?"></a>++i和i++哪一个效率高，为什么?</h4><p>++i效率比i++的效率更高，因为++i少了一个返回i的过程。</p>
+<h4 id="echo-、print-、print-r-的区别"><a href="#echo-、print-、print-r-的区别" class="headerlink" title="echo()、print()、print_r()的区别?"></a>echo()、print()、print_r()的区别?</h4><p>echo 是php语法，可以输出多个变量，不能输出数组。</p>
+<p>Print()是php中的函数，只能输出简单的变量。</p>
+<p>Print_r()是php中的函数，可以输出变量也可以输出数组。</p>
+<h4 id="框架中什么是单一入口和多入口，单一入口的优缺点"><a href="#框架中什么是单一入口和多入口，单一入口的优缺点" class="headerlink" title="框架中什么是单一入口和多入口，单一入口的优缺点?"></a>框架中什么是单一入口和多入口，单一入口的优缺点?</h4><p>1、多入口就是通过访问不同的文件来完成用户请求。<br>单一入口只web程序所有的请求都指向一个脚本文件的。<br>2、单一入口更容易控制权限，方便对http请求可以进行安全性检查。<br>缺点：URL看起来不那么美观，特别是对搜索引擎来说不友好。</p>
+<h4 id="提示类型200、404、502是什么意思。"><a href="#提示类型200、404、502是什么意思。" class="headerlink" title="提示类型200、404、502是什么意思。"></a>提示类型200、404、502是什么意思。</h4><p>200是请求成功，404是文件未找到，502是服务器内部错误。</p>
+<h4 id="你对Memcach的理解，优点有哪些"><a href="#你对Memcach的理解，优点有哪些" class="headerlink" title="你对Memcach的理解，优点有哪些?"></a>你对Memcach的理解，优点有哪些?</h4><p>Memcache是一种缓存技术，在一定的时间内将动态网页经过解析之后保存到文件，下次访问时动态网页就直接调用这个文件，而不必在重新访问数据库。使用memcache做缓存的好处是：提高网站的访问速度，减轻高并发时服务器的压力。</p>
+<p>Memcache的优点：稳定、配置简单、多机分布式存储、速度快。</p>
+<h4 id="对关系型数据库而言，索引是相当重要的概念，请回答有关索引几个问题"><a href="#对关系型数据库而言，索引是相当重要的概念，请回答有关索引几个问题" class="headerlink" title="对关系型数据库而言，索引是相当重要的概念，请回答有关索引几个问题:"></a>对关系型数据库而言，索引是相当重要的概念，请回答有关索引几个问题:</h4><p>a) 索引的目的是什么?</p>
+<p>b) 索引对数据库系统的负面影响是什么?</p>
+<p>c) 为数据表建立索引的原则有哪些?</p>
+<p>d) 什么情况下不宜建立索引?</p>
+<p>答：<br>索引的目的：</p>
+<p>1、快速访问数据表中的特定信息，提高检索速度</p>
+<p>2、创建唯一性索引，保证数据库表中每一行数据的唯一性</p>
+<p>3、加速表和表之间的连接</p>
+<p>4、使用分组和排序子句进行数据检索时，可以显著减少查询中分组和排序的时间</p>
+<p>负面影响：创建索引和维护索引需要耗费时间，这个时间随着数据量的增加而增加；索引需要占用物理空间，不光是表需要占用数据空间，每个索引也需要占用物理空间；当对表进行增、删、改的时候索引也要动态维护，这样就降低了数据的维护速度。</p>
+<p>建立索引的原则：</p>
+<p>1、在最频繁使用的、用以缩小查询范围的字段上建立索引</p>
+<p>2、在平频繁使用的、需要排序的字段上建立索引</p>
+<p>什么情况下不宜建立索引：</p>
+<p>1、对于查询中很少涉及的列或者重复值比较多的列，不宜建立索引</p>
+<p>2、对于一些特殊的数据类型，不宜建立索引，比如文本字段(text)等。</p>
+<h4 id="web应用中-数据库的读取频率远高于写入频率-如何优化MySQL而应对此种情景"><a href="#web应用中-数据库的读取频率远高于写入频率-如何优化MySQL而应对此种情景" class="headerlink" title="web应用中,数据库的读取频率远高于写入频率, 如何优化MySQL而应对此种情景 ?"></a>web应用中,数据库的读取频率远高于写入频率, 如何优化MySQL而应对此种情景 ?</h4><p>使用memcache缓存技术，将动态数据缓存到文件，访问动态页面时直接调用缓存文件，而不必重新访问数据库，这样就减少了查询数据库的次数。</p>
+<p>如果网站的访问量很大，可以把数据库读写服务器分开，使用多态服务器去处理数据库查询，使用较少的服务器去处理数据库的写入和修改。</p>
+<h4 id="include与require的区别"><a href="#include与require的区别" class="headerlink" title="include与require的区别?"></a>include与require的区别?</h4><p>Php在遇到include时就重新解释一次，如果一个页面中出现10次include，php就重新解释10次，而php遇到require时只解释一次，即使页面中出现多次require，php也直解释一次。</p>
+<p>使用require包含文件时，被包含的文件当成了当前文件的一个组成部分，如果被包含的文件中有语法错误或者文件不存在，程序就提示错误信息，并结束执行。</p>
+<p>使用include包含文件时，相当于指定了文件的路径，被包含的文件中有语法错误或者文件不存在时，页面只是给出警告信息，不响应程序本身的执行。</p>
+<h4 id="PHP字符串中单引号与双引号的区别"><a href="#PHP字符串中单引号与双引号的区别" class="headerlink" title="PHP字符串中单引号与双引号的区别?"></a>PHP字符串中单引号与双引号的区别?</h4><p>单引号不能解释变量，而双引号可以解释变量。<br>单引号不能转义字符，在双引号中可以转义字符。</p>
+<h4 id="php中-模板引擎的目的是什么-你用过哪些模板引擎"><a href="#php中-模板引擎的目的是什么-你用过哪些模板引擎" class="headerlink" title="php中,模板引擎的目的是什么? 你用过哪些模板引擎?"></a>php中,模板引擎的目的是什么? 你用过哪些模板引擎?</h4><p>使用模板引擎的目的是使程序的逻辑代码和html界面代码分离开，是程序的结构更清晰。<br>使用过的模板引擎：Smarty、ThinkPHP的ThinkTemplate</p>
+<h4 id="指出以下代码片段中的SQL注入漏洞以及解决方法-magic-quotes-gpc-off"><a href="#指出以下代码片段中的SQL注入漏洞以及解决方法-magic-quotes-gpc-off" class="headerlink" title="指出以下代码片段中的SQL注入漏洞以及解决方法(magic_quotes_gpc = off)"></a>指出以下代码片段中的SQL注入漏洞以及解决方法(magic_quotes_gpc = off)</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql_query(<span class="string">"select id,title from content where catid='&#123;$_GET[catid]&#125;' and title like '%$_GET[keywords]%'"</span>, $link);</div></pre></td></tr></table></figure>
+<p>注入漏洞主要存在用户提交的数据上，这里的注入漏洞主要是$_GET[catid]和$_GET[keyword]</p>
+<p>解决注入漏洞：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$_GET[catid]=intval($_GET[catid]);</div><div class="line"></div><div class="line">$sql=<span class="string">"select id,title from content where catid='&#123;$_GET[catid]&#125;' and title like '%$_GET[keywords]%"</span>;</div><div class="line"></div><div class="line">$sql=addslashes($sql);</div><div class="line"></div><div class="line">mysql_query($sql);</div></pre></td></tr></table></figure></p>
+<h4 id="MyISAM-和-InnoDB-的基本区别"><a href="#MyISAM-和-InnoDB-的基本区别" class="headerlink" title="MyISAM 和 InnoDB 的基本区别?"></a>MyISAM 和 InnoDB 的基本区别?</h4><p>MYISAM不支持外键和事务处理，采用表锁机制，查询速度稍快，数据存储文件有3个，InnoDB支持外键和事务处理，采用行锁机制，查询速度比MYISAM稍慢，数据存储文件只有一个。</p>
+<h4 id="写出匹配URL的正则表达式"><a href="#写出匹配URL的正则表达式" class="headerlink" title="写出匹配URL的正则表达式."></a>写出匹配URL的正则表达式.</h4><p>/^http:\/\/www.([\w]+).([\w]+)$/</p>
+<h4 id="写一个函数实现字符串翻转"><a href="#写一个函数实现字符串翻转" class="headerlink" title="写一个函数实现字符串翻转"></a>写一个函数实现字符串翻转</h4><p>方法一：strrev(‘abcdef’);<br>方法二：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">str</span><span class="params">($a)</span></span>&#123;</div><div class="line">	$len = strlen($a);</div><div class="line">	$b = <span class="string">""</span>;</div><div class="line">	<span class="keyword">for</span>($i = $len<span class="number">-1</span>; $i &gt;= <span class="number">0</span>; $i--)</div><div class="line">	&#123;</div><div class="line">		$b .= $a[$i];</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> $b;</div><div class="line">&#125;</div><div class="line"><span class="keyword">echo</span> str(<span class="string">'abcdef'</span>);</div></pre></td></tr></table></figure></p>
+<h4 id="不断在文件hello-txt头部写入一行“Hello-World”字符串，要求代码完整"><a href="#不断在文件hello-txt头部写入一行“Hello-World”字符串，要求代码完整" class="headerlink" title="不断在文件hello.txt头部写入一行“Hello World”字符串，要求代码完整"></a>不断在文件hello.txt头部写入一行“Hello World”字符串，要求代码完整</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$fp=fopen(<span class="string">'hello.txt'</span>, <span class="string">'r'</span>);</div><div class="line"></div><div class="line">$str=<span class="string">'hello!'</span>.<span class="string">"\n"</span>;</div><div class="line"></div><div class="line">$str.=fread($fp, filesize(<span class="string">'./hello.txt'</span>));</div><div class="line"></div><div class="line">fclose($fp);</div><div class="line"></div><div class="line">$fp1=fopen(<span class="string">'hello.txt'</span>, <span class="string">'w'</span>);</div><div class="line"></div><div class="line">fwrite($fp1, $str);</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat-reward.jpg" alt="阿东 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay-reward.jpg" alt="阿东 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/面试/" rel="tag"># 面试</a>
+          
+            <a href="/tags/理论知识/" rel="tag"># 理论知识</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/26/server-build-svn/" rel="next" title="搭建SVN服务器">
+                <i class="fa fa-chevron-left"></i> 搭建SVN服务器
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2017/02/28/php-knowledge/"
+     data-title="收集、总结的一些PHP理论知识（对于面试有帮助）"
+     data-content=""
+     data-url="https://vonfly.github.io/2017/02/28/php-knowledge/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/02/28/php-knowledge/"
+           data-title="收集、总结的一些PHP理论知识（对于面试有帮助）" data-url="https://vonfly.github.io/2017/02/28/php-knowledge/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/my-avatar.jpg"
+               alt="阿东" />
+          <p class="site-author-name" itemprop="name">阿东</p>
+          <p class="site-description motion-element" itemprop="description">编程、人生。编成我们的人生！</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/vonfly" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://meilvlx.com/xzyoo/" title="美旅旅行" target="_blank">美旅旅行</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#用最少的代码写一个求3值最大值的函数"><span class="nav-number">1.</span> <span class="nav-text">用最少的代码写一个求3值最大值的函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用PHP打印出前一天的时间，打印格式是2007年5月10日22-21-21"><span class="nav-number">2.</span> <span class="nav-text">用PHP打印出前一天的时间，打印格式是2007年5月10日22:21:21</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出正在浏览当前页面用户的IP地址"><span class="nav-number">3.</span> <span class="nav-text">输出正在浏览当前页面用户的IP地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询（query）的字符串URL中第一个问号-之后的内容（比如http-localhost-text-php-id-1-amp-bi-2，查询出-id-1-amp-bi-2-）"><span class="nav-number">4.</span> <span class="nav-text">查询（query）的字符串URL中第一个问号 ? 之后的内容（比如http://localhost/text.php?id=1&bi=2，查询出 id=1&bi=2 ）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#当前运行脚本所在的文档根目录"><span class="nav-number">5.</span> <span class="nav-text">当前运行脚本所在的文档根目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#写一个函数，能够遍历一个文件夹下的所有文件和子文件夹"><span class="nav-number">6.</span> <span class="nav-text">写一个函数，能够遍历一个文件夹下的所有文件和子文件夹</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请用正则表达式（Regular-Expression）验证电子邮件的格式是否正确。"><span class="nav-number">7.</span> <span class="nav-text">请用正则表达式（Regular Expression）验证电子邮件的格式是否正确。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用PHP写出显示客户端IP与服务器IP的代码"><span class="nav-number">8.</span> <span class="nav-text">用PHP写出显示客户端IP与服务器IP的代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何修改SESSION的生存时间"><span class="nav-number">9.</span> <span class="nav-text">如何修改SESSION的生存时间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#有一个网页地址-比如百度主页-http-www-baidu-com-如何得到它的内容"><span class="nav-number">10.</span> <span class="nav-text">有一个网页地址, 比如百度主页: http://www.baidu.com/,如何得到它的内容?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请说明php中传值与传引用的区别。什么时候传值什么时候传引用"><span class="nav-number">11.</span> <span class="nav-text">请说明php中传值与传引用的区别。什么时候传值什么时候传引用?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#写一个函数，尽可能高效的，从一个标准-url-里取出文件的扩展名"><span class="nav-number">12.</span> <span class="nav-text">写一个函数，尽可能高效的，从一个标准 url 里取出文件的扩展名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用五种以上方式获取一个文件的扩展名"><span class="nav-number">13.</span> <span class="nav-text">使用五种以上方式获取一个文件的扩展名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出以下值"><span class="nav-number">14.</span> <span class="nav-text">输出以下值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MySQL数据库中的字段类型varchar和char的主要区别是什么-那种字段的查找效率要高，为什么"><span class="nav-number">15.</span> <span class="nav-text">MySQL数据库中的字段类型varchar和char的主要区别是什么?那种字段的查找效率要高，为什么?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#写出三种以上MySQL数据库存储引擎的名称（提示：不区分大小写）"><span class="nav-number">16.</span> <span class="nav-text">写出三种以上MySQL数据库存储引擎的名称（提示：不区分大小写）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#求两个日期的差数，例如2007-2-5-2007-3-6-的日期差数"><span class="nav-number">17.</span> <span class="nav-text">求两个日期的差数，例如2007-2-5 ~ 2007-3-6 的日期差数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请写一个函数，实现以下功能："><span class="nav-number">18.</span> <span class="nav-text">请写一个函数，实现以下功能：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#echo-count-“abc”-输出什么"><span class="nav-number">19.</span> <span class="nav-text">echo count(“abc”); 输出什么?</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有一个一维数组，里面存储整形数据，请写一个函数，将他们按从大到小的顺序排列。要求执行效率高。并说明如何改善执行效率。（该函数必须自己实现，不能使用php函数）"><span class="nav-number"></span> <span class="nav-text">有一个一维数组，里面存储整形数据，请写一个函数，将他们按从大到小的顺序排列。要求执行效率高。并说明如何改善执行效率。（该函数必须自己实现，不能使用php函数）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#请举例说明在你的开发过程中用什么方法来加快页面的加载速度"><span class="nav-number">1.</span> <span class="nav-text">请举例说明在你的开发过程中用什么方法来加快页面的加载速度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTTP协议中GET、POST和HEAD的区别"><span class="nav-number">2.</span> <span class="nav-text">HTTP协议中GET、POST和HEAD的区别?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cookie和session的区别，禁止了cookie后session能正常使用吗-session的缺点是什么-session在服务器端是存在哪里的-是共有的还是私有的"><span class="nav-number">3.</span> <span class="nav-text">Cookie和session的区别，禁止了cookie后session能正常使用吗?session的缺点是什么?session在服务器端是存在哪里的?是共有的还是私有的?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#写几个魔术方法并说明作用"><span class="nav-number">4.</span> <span class="nav-text">写几个魔术方法并说明作用?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组中下标最好是什么类型的，为什么"><span class="nav-number">5.</span> <span class="nav-text">数组中下标最好是什么类型的，为什么?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#i和i-哪一个效率高，为什么"><span class="nav-number">6.</span> <span class="nav-text">++i和i++哪一个效率高，为什么?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#echo-、print-、print-r-的区别"><span class="nav-number">7.</span> <span class="nav-text">echo()、print()、print_r()的区别?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#框架中什么是单一入口和多入口，单一入口的优缺点"><span class="nav-number">8.</span> <span class="nav-text">框架中什么是单一入口和多入口，单一入口的优缺点?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#提示类型200、404、502是什么意思。"><span class="nav-number">9.</span> <span class="nav-text">提示类型200、404、502是什么意思。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#你对Memcach的理解，优点有哪些"><span class="nav-number">10.</span> <span class="nav-text">你对Memcach的理解，优点有哪些?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对关系型数据库而言，索引是相当重要的概念，请回答有关索引几个问题"><span class="nav-number">11.</span> <span class="nav-text">对关系型数据库而言，索引是相当重要的概念，请回答有关索引几个问题:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#web应用中-数据库的读取频率远高于写入频率-如何优化MySQL而应对此种情景"><span class="nav-number">12.</span> <span class="nav-text">web应用中,数据库的读取频率远高于写入频率, 如何优化MySQL而应对此种情景 ?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#include与require的区别"><span class="nav-number">13.</span> <span class="nav-text">include与require的区别?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PHP字符串中单引号与双引号的区别"><span class="nav-number">14.</span> <span class="nav-text">PHP字符串中单引号与双引号的区别?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#php中-模板引擎的目的是什么-你用过哪些模板引擎"><span class="nav-number">15.</span> <span class="nav-text">php中,模板引擎的目的是什么? 你用过哪些模板引擎?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#指出以下代码片段中的SQL注入漏洞以及解决方法-magic-quotes-gpc-off"><span class="nav-number">16.</span> <span class="nav-text">指出以下代码片段中的SQL注入漏洞以及解决方法(magic_quotes_gpc = off)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MyISAM-和-InnoDB-的基本区别"><span class="nav-number">17.</span> <span class="nav-text">MyISAM 和 InnoDB 的基本区别?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#写出匹配URL的正则表达式"><span class="nav-number">18.</span> <span class="nav-text">写出匹配URL的正则表达式.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#写一个函数实现字符串翻转"><span class="nav-number">19.</span> <span class="nav-text">写一个函数实现字符串翻转</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不断在文件hello-txt头部写入一行“Hello-World”字符串，要求代码完整"><span class="nav-number">20.</span> <span class="nav-text">不断在文件hello.txt头部写入一行“Hello World”字符串，要求代码完整</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">阿东</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i>访问人数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i>总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"vonfly"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js?v=5.1.0"></script>
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
+
+
+
+</body>
+</html>
