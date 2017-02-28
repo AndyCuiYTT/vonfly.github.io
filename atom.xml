@@ -143,7 +143,7 @@
     <link href="https://vonfly.github.io/2017/02/26/server-build-svn/"/>
     <id>https://vonfly.github.io/2017/02/26/server-build-svn/</id>
     <published>2017-02-26T01:24:08.000Z</published>
-    <updated>2017-02-27T13:07:10.314Z</updated>
+    <updated>2017-02-28T12:36:28.829Z</updated>
     
     <content type="html"><![CDATA[<p>在 Centos5.5 上搭建SVN服务器并实现自动同步至web目录。<br><a id="more"></a></p>
 <h2 id="一、搭建svn环境并创建仓库："><a href="#一、搭建svn环境并创建仓库：" class="headerlink" title="一、搭建svn环境并创建仓库："></a>一、搭建svn环境并创建仓库：</h2><h3 id="安装Subversion"><a href="#安装Subversion" class="headerlink" title="安装Subversion"></a>安装Subversion</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install -y subversion</div></pre></td></tr></table></figure>
@@ -178,7 +178,7 @@
     
     </summary>
     
-      <category term="服务器" scheme="https://vonfly.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <category term="Linux" scheme="https://vonfly.github.io/categories/Linux/"/>
     
     
       <category term="SVN" scheme="https://vonfly.github.io/tags/SVN/"/>
