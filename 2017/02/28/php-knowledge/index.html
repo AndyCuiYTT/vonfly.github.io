@@ -86,16 +86,16 @@
 
 
 
-<meta name="description" content="本页面主要用于编写一些理论知识，从网上找的或者自己总结的都会有。(●’◡’●)">
+<meta name="description" content="本页面主要用于编写一些理论知识，从网上找的或者自己总结的都会有。主要用于自己学习。如发现本网站载有侵犯您著作权的侵权信息，可联系我删除(●’◡’●)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="收集、总结的一些PHP理论知识（对于面试有帮助）">
 <meta property="og:url" content="https://vonfly.github.io/2017/02/28/php-knowledge/index.html">
 <meta property="og:site_name" content="编程、人生">
-<meta property="og:description" content="本页面主要用于编写一些理论知识，从网上找的或者自己总结的都会有。(●’◡’●)">
-<meta property="og:updated_time" content="2017-02-28T11:46:23.185Z">
+<meta property="og:description" content="本页面主要用于编写一些理论知识，从网上找的或者自己总结的都会有。主要用于自己学习。如发现本网站载有侵犯您著作权的侵权信息，可联系我删除(●’◡’●)">
+<meta property="og:updated_time" content="2017-02-28T11:54:17.811Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="收集、总结的一些PHP理论知识（对于面试有帮助）">
-<meta name="twitter:description" content="本页面主要用于编写一些理论知识，从网上找的或者自己总结的都会有。(●’◡’●)">
+<meta name="twitter:description" content="本页面主要用于编写一些理论知识，从网上找的或者自己总结的都会有。主要用于自己学习。如发现本网站载有侵犯您著作权的侵权信息，可联系我删除(●’◡’●)">
 
 
 
@@ -200,6 +200,16 @@
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
             分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -402,7 +412,7 @@
       
 
       
-        <p>本页面主要用于编写一些理论知识，从网上找的或者自己总结的都会有。(●’◡’●)</p>
+        <p>本页面主要用于编写一些理论知识，从网上找的或者自己总结的都会有。主要用于自己学习。如发现本网站载有侵犯您著作权的侵权信息，可联系我删除(●’◡’●)</p>
 <a id="more"></a>
 <h4 id="用最少的代码写一个求3值最大值的函数"><a href="#用最少的代码写一个求3值最大值的函数" class="headerlink" title="用最少的代码写一个求3值最大值的函数"></a>用最少的代码写一个求3值最大值的函数</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span><span class="params">($a,$b,$c)</span></span>&#123;</div><div class="line">	<span class="keyword">return</span> $a &gt; $b ? ($a &gt; $c ? $a : $c) : ($b &gt; $c ? $b : $c);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h4 id="用PHP打印出前一天的时间，打印格式是2007年5月10日22-21-21"><a href="#用PHP打印出前一天的时间，打印格式是2007年5月10日22-21-21" class="headerlink" title="用PHP打印出前一天的时间，打印格式是2007年5月10日22:21:21"></a>用PHP打印出前一天的时间，打印格式是2007年5月10日22:21:21</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">echo</span> date(<span class="string">'Y-m-d H:i:s'</span>, strtotime(<span class="string">'-1 day'</span>));</div></pre></td></tr></table></figure>
