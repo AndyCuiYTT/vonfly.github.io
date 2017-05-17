@@ -97,7 +97,7 @@
 <meta property="og:image" content="http://olixffhc0.bkt.clouddn.com/server_svn3.jpg">
 <meta property="og:image" content="http://olixffhc0.bkt.clouddn.com/server_svn4.jpg">
 <meta property="og:image" content="http://olixffhc0.bkt.clouddn.com/server_svn5.jpg">
-<meta property="og:updated_time" content="2017-02-28T12:36:28.829Z">
+<meta property="og:updated_time" content="2017-05-15T02:57:21.057Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建SVN服务器">
 <meta name="twitter:description" content="在 Centos5.5 上搭建SVN服务器并实现自动同步至web目录。">
@@ -414,10 +414,11 @@
 <h3 id="配置用户名命令文件"><a href="#配置用户名命令文件" class="headerlink" title="配置用户名命令文件"></a>配置用户名命令文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim passwd</div></pre></td></tr></table></figure>
 <p><img src="http://olixffhc0.bkt.clouddn.com/server_svn3.jpg" alt="用户名密码配置"></p>
 <h3 id="配置SVN服务综合配置文件"><a href="#配置SVN服务综合配置文件" class="headerlink" title="配置SVN服务综合配置文件"></a>配置SVN服务综合配置文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim svnserve.conf</div></pre></td></tr></table></figure>
-<p>//找到以下配置项，将前面的#号去掉（注意：所有配置项前面不能留空格），然后做相应的配置<br>anon-access = none      //匿名用户访问权限:无<br>auth-access = write     //普通用户访问权限:写<br>password-db = passwd    //密码文件<br>authz-db = authz        //权限配置文件<br>realm = /home/svn/test   //版本库所在</p>
+<p>//找到以下配置项，将前面的#号去掉（注意：所有配置项前面不能留空格），然后做相应的配置<br>anon-access = none      //匿名用户访问权限:无<br>auth-access = write     //普通用户访问权限:写<br>password-db = passwd    //引入密码文件<br>authz-db = authz        //引入权限配置文件<br>realm = /home/svn/test   //版本库所在</p>
 <h3 id="启动svn服务"><a href="#启动svn服务" class="headerlink" title="启动svn服务"></a>启动svn服务</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">svnserve -d -r /home/svn</div></pre></td></tr></table></figure>
+<p>其中 -d表示(独立端口运行)    -r表示(仓库地址)<br>svn服务走svn协议，端口号是3690</p>
 <p>如果提示：svnserve: E000098: Can’t bind server socket: Address already in use<br>证明现在svn已经被启动了，由于我们修改了配置文件，因此要重启svn服务，所以要先关闭svn再重启svn</p>
-<p>查看svn服务详情（如下图所示）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ps aux|grep svn</div></pre></td></tr></table></figure></p>
+<p>查看svn服务详情（如下图所示）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ps aux | grep svn</div></pre></td></tr></table></figure></p>
 <p>将svn服务强制停止  其中790为svn服务的ID号，-9是kill的参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">kill -9 790</div></pre></td></tr></table></figure></p>
 <p>最后再重新运行 svnserve -d -r /var/svn</p>
 <h3 id="测试有没有成功"><a href="#测试有没有成功" class="headerlink" title="测试有没有成功"></a>测试有没有成功</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd /www</div><div class="line">mkdir test</div><div class="line">svn co svn://localhost/test /www/test --username vonfly(SVN账号) --password vonfly(SVN密码)</div></pre></td></tr></table></figure>
@@ -429,6 +430,9 @@
 <p>#!/bin/sh<br>export LANG=zh_CN.UTF-8<br>SVN_PATH=/usr/bin/svn   //这里不用改<br>WEB_PATH=/www/test  //对应自己web目录<br>//这里的用户随便一个就好<br>$SVN_PATH update $WEB_PATH –username ‘vonfly’ –password ‘vonfly’ –no-auth-cache</p>
 <p><img src="http://olixffhc0.bkt.clouddn.com/server_svn5.jpg" alt="post-commit"></p>
 <h3 id="给post-commit-执行权限"><a href="#给post-commit-执行权限" class="headerlink" title="给post-commit 执行权限"></a>给post-commit 执行权限</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chmod 755 post-commit</div></pre></td></tr></table></figure>
+<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><h3 id="具体权限表示"><a href="#具体权限表示" class="headerlink" title="具体权限表示"></a>具体权限表示</h3><p>r(read)读【有update操作】    w(write)写【有commit操作】</p>
+<h3 id="开启只操作某个目录的权限"><a href="#开启只操作某个目录的权限" class="headerlink" title="开启只操作某个目录的权限"></a>开启只操作某个目录的权限</h3><p>要求：给帐号设置只操作temp目录的权限，只能给操作temp目录的用户只读权限<br>对应的权限文件（authz）设置<br>[test:/temp]<br>temp1 = r<br>temp2 = r<br>…..<br>对应的本地客户端拉取就要：输入远程链接：svn://服务器iP地址/test/temp<br>说明：这样的设置不会影响到之前[test:/]的设置，两个设置可以共存</p>
+
       
     </div>
 
@@ -590,7 +594,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">20</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -599,7 +603,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -608,7 +612,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -675,7 +679,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、搭建svn环境并创建仓库："><span class="nav-number">1.</span> <span class="nav-text">一、搭建svn环境并创建仓库：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Subversion"><span class="nav-number">1.1.</span> <span class="nav-text">安装Subversion</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#检测是否安装成功-查看svn版本号"><span class="nav-number">1.2.</span> <span class="nav-text">检测是否安装成功(查看svn版本号)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建版本库（没有规定在哪创建目录）"><span class="nav-number">1.3.</span> <span class="nav-text">创建版本库（没有规定在哪创建目录）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建用户组及用户"><span class="nav-number">2.</span> <span class="nav-text">创建用户组及用户</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#修改权限配置文件"><span class="nav-number">2.1.</span> <span class="nav-text">修改权限配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置用户名命令文件"><span class="nav-number">2.2.</span> <span class="nav-text">配置用户名命令文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置SVN服务综合配置文件"><span class="nav-number">2.3.</span> <span class="nav-text">配置SVN服务综合配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动svn服务"><span class="nav-number">2.4.</span> <span class="nav-text">启动svn服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试有没有成功"><span class="nav-number">2.5.</span> <span class="nav-text">测试有没有成功</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地拉取、推送（本地要先安装SVN客户端）"><span class="nav-number">3.</span> <span class="nav-text">本地拉取、推送（本地要先安装SVN客户端）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地commit时自动同步到web目录"><span class="nav-number">4.</span> <span class="nav-text">本地commit时自动同步到web目录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#进入-var-svn-project-hooks下，建立post-commit文件"><span class="nav-number">4.1.</span> <span class="nav-text">进入/var/svn/project/hooks下，建立post-commit文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给post-commit-执行权限"><span class="nav-number">4.2.</span> <span class="nav-text">给post-commit 执行权限</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、搭建svn环境并创建仓库："><span class="nav-number">1.</span> <span class="nav-text">一、搭建svn环境并创建仓库：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Subversion"><span class="nav-number">1.1.</span> <span class="nav-text">安装Subversion</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#检测是否安装成功-查看svn版本号"><span class="nav-number">1.2.</span> <span class="nav-text">检测是否安装成功(查看svn版本号)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建版本库（没有规定在哪创建目录）"><span class="nav-number">1.3.</span> <span class="nav-text">创建版本库（没有规定在哪创建目录）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建用户组及用户"><span class="nav-number">2.</span> <span class="nav-text">创建用户组及用户</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#修改权限配置文件"><span class="nav-number">2.1.</span> <span class="nav-text">修改权限配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置用户名命令文件"><span class="nav-number">2.2.</span> <span class="nav-text">配置用户名命令文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置SVN服务综合配置文件"><span class="nav-number">2.3.</span> <span class="nav-text">配置SVN服务综合配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动svn服务"><span class="nav-number">2.4.</span> <span class="nav-text">启动svn服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试有没有成功"><span class="nav-number">2.5.</span> <span class="nav-text">测试有没有成功</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地拉取、推送（本地要先安装SVN客户端）"><span class="nav-number">3.</span> <span class="nav-text">本地拉取、推送（本地要先安装SVN客户端）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地commit时自动同步到web目录"><span class="nav-number">4.</span> <span class="nav-text">本地commit时自动同步到web目录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#进入-var-svn-project-hooks下，建立post-commit文件"><span class="nav-number">4.1.</span> <span class="nav-text">进入/var/svn/project/hooks下，建立post-commit文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给post-commit-执行权限"><span class="nav-number">4.2.</span> <span class="nav-text">给post-commit 执行权限</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#扩展"><span class="nav-number">5.</span> <span class="nav-text">扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#具体权限表示"><span class="nav-number">5.1.</span> <span class="nav-text">具体权限表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开启只操作某个目录的权限"><span class="nav-number">5.2.</span> <span class="nav-text">开启只操作某个目录的权限</span></a></li></ol></li></ol></div>
             
 
           </div>
