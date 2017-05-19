@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vonfly.github.io/"/>
-  <updated>2017-05-05T07:33:28.236Z</updated>
+  <updated>2017-05-18T02:15:59.959Z</updated>
   <id>https://vonfly.github.io/</id>
   
   <author>
@@ -20,40 +20,61 @@
     <link href="https://vonfly.github.io/2017/05/05/memcache/"/>
     <id>https://vonfly.github.io/2017/05/05/memcache/</id>
     <published>2017-05-05T07:32:54.000Z</published>
-    <updated>2017-05-05T07:33:28.236Z</updated>
+    <updated>2017-05-18T02:15:59.959Z</updated>
     
     <summary type="html">
     
     </summary>
     
+      <category term="缓存技术" scheme="https://vonfly.github.io/categories/%E7%BC%93%E5%AD%98%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="nosql" scheme="https://vonfly.github.io/tags/nosql/"/>
     
   </entry>
   
   <entry>
-    <title>coreseek中文分词</title>
+    <title>coreseek中文检索引擎</title>
     <link href="https://vonfly.github.io/2017/05/04/coreseek/"/>
     <id>https://vonfly.github.io/2017/05/04/coreseek/</id>
     <published>2017-05-04T06:32:27.000Z</published>
-    <updated>2017-05-04T07:15:09.803Z</updated>
+    <updated>2017-05-19T15:49:05.060Z</updated>
     
-    <content type="html"><![CDATA[<p>在 Centos5.5 上编译安装coreseek以及配置<br><a id="more"></a></p>
+    <content type="html"><![CDATA[<p>在 Centos6.5 上编译安装coreseek以及配置<br><a id="more"></a></p>
 <h2 id="下载对应安装包，并解压"><a href="#下载对应安装包，并解压" class="headerlink" title="下载对应安装包，并解压"></a>下载对应安装包，并解压</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"># tar zxvf coreseek-3.2.14.tar.gz</div></pre></td></tr></table></figure>
-<h2 id="先进入mmseg-3-2-14目录安装中文分词"><a href="#先进入mmseg-3-2-14目录安装中文分词" class="headerlink" title="先进入mmseg-3.2.14目录安装中文分词"></a>先进入mmseg-3.2.14目录安装中文分词</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># ls</div><div class="line"># cd mmseg-3.2.14/</div><div class="line">//检测环境配置是否会报错</div><div class="line"># ./configure --prefix=/usr/local/mmseg</div></pre></td></tr></table></figure>
+<h2 id="先进入mmseg-3-2-14目录安装中文分词"><a href="#先进入mmseg-3-2-14目录安装中文分词" class="headerlink" title="先进入mmseg-3.2.14目录安装中文分词"></a>先进入mmseg-3.2.14目录安装中文分词</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># ls</div><div class="line"># cd coreseek-3.2.14/mmseg-3.2.14/</div><div class="line">//检测环境配置是否会报错</div><div class="line"># ./configure --prefix=/usr/local/mmseg</div></pre></td></tr></table></figure>
 <p>编译过程中报了一个config.status:error:cannot find input file:src/Makeefile.in这个的错误，然后运行以下指令再次编译就能通过了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># automake</div><div class="line"># ./configure --prefix=/usr/local/mmseg</div><div class="line">//开始编译</div><div class="line"># make</div><div class="line">//进行安装</div><div class="line"># make install</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"># aclocal</div><div class="line"># libtoolize --force</div><div class="line"># automake --add-missing</div><div class="line"># autoconf</div><div class="line"># autoheader</div><div class="line"># make clean</div><div class="line"># ./configure --prefix=/usr/local/mmseg</div><div class="line">//开始编译</div><div class="line"># make</div><div class="line">//进行安装</div><div class="line"># make install</div></pre></td></tr></table></figure>
 <p>到这里就安装完了mmseg</p>
 <h2 id="先进入csft-3-2-14目录安装csft"><a href="#先进入csft-3-2-14目录安装csft" class="headerlink" title="先进入csft-3.2.14目录安装csft"></a>先进入csft-3.2.14目录安装csft</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"># ls</div><div class="line"># cd csft-3.2.14/</div><div class="line">//检测环境配置是否会报错</div><div class="line"># ./configure --prefix=/usr/local/coreseek --with-mysql=/usr/local/mysql --with-mmseg=/usr/local/mmseg --with-mmseg-includes=/usr/local/mmseg/include/mmseg/ --with-mmseg-libs=/usr/local/mmseg/lib/</div><div class="line"></div><div class="line"># make</div><div class="line"># make install</div></pre></td></tr></table></figure>
 <p>到这里就安装完了csft</p>
 <h2 id="配置coreseek"><a href="#配置coreseek" class="headerlink" title="配置coreseek"></a>配置coreseek</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//进入配置目录</div><div class="line"># cd /usr/local/coreseek/etc</div><div class="line">//复制一份配置文件并改名为csft.conf，因为coreseek默认加载的配置文件是csft.conf</div><div class="line"># cp sphinx.conf.dist csft.conf</div></pre></td></tr></table></figure>
-<p>vim csft.conf，修改为：</p>
+<p>vim csft.conf，修改为：<br>如下图：</p>
+<h2 id="用PHP连接使用Sphinx"><a href="#用PHP连接使用Sphinx" class="headerlink" title="用PHP连接使用Sphinx"></a>用PHP连接使用Sphinx</h2><p>1、先到<a href="http://pecl.php.net/package/sphinx下载所需要的扩展库" target="_blank" rel="external">http://pecl.php.net/package/sphinx下载所需要的扩展库</a><br>2、解压文件和进入解压目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># tar zxvf sphinx-1.3.3.tgz</div><div class="line"># cd sphinx-1.3.3</div></pre></td></tr></table></figure>
+<p>3、调用phpize，生成configure</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//注意此处是你服务器上php安装的地址</div><div class="line"># /usr/local/php/bin/phpize</div></pre></td></tr></table></figure>
+<p>4、检测环境配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"># ./configure --with-php-config=/usr/local/php/bin/php-config --with-sphinx</div></pre></td></tr></table></figure>
+<p>报错，如下图：<br><img src="http://olixffhc0.bkt.clouddn.com/shhinx.jpg" alt="报错图片"><br>5、进入以下目录(之前coreseek-3.2.14的解压目录)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># cd /usr/local/src/coreseek-3.2.14/csft-3.2.14/api/libsphinxclient</div><div class="line"># ./configure</div><div class="line"># make &amp;&amp; make install</div></pre></td></tr></table></figure>
+<p>6、重新到sphinx-1.3.3目录下执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># cd /usr/local/src/sphinx-1.3.3</div><div class="line"># ./configure --with-php-config=/usr/local/php/bin/php-config --with-sphinx</div><div class="line"># make &amp;&amp; make install</div></pre></td></tr></table></figure>
+<p>执行结果如下图：<br><img src="http://olixffhc0.bkt.clouddn.com/shhinx1.jpg" alt="成功"><br>7、修改php下php.ini文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"># vim /usr/local/php/etc/php.ini</div></pre></td></tr></table></figure>
+<p>…….<br>; For example, on Windows:<br>;<br>;   extension=msql.dll<br>;<br>; … or under UNIX:<br>;<br>;   extension=msql.so<br>extension=sphinx.so     //添加如下这行</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;在 Centos5.5 上编译安装coreseek以及配置&lt;br&gt;
+      &lt;p&gt;在 Centos6.5 上编译安装coreseek以及配置&lt;br&gt;
     
     </summary>
     
+      <category term="数据库" scheme="https://vonfly.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="nosql" scheme="https://vonfly.github.io/tags/nosql/"/>
     
   </entry>
   
@@ -230,7 +251,7 @@
     <link href="https://vonfly.github.io/2017/03/20/mysql-master-slave/"/>
     <id>https://vonfly.github.io/2017/03/20/mysql-master-slave/</id>
     <published>2017-03-20T01:27:11.000Z</published>
-    <updated>2017-05-16T01:40:38.789Z</updated>
+    <updated>2017-05-18T02:15:18.060Z</updated>
     
     <content type="html"><![CDATA[<p>mysql主从复制和慢查询日志说明<br><a id="more"></a></p>
 <h4 id="MySQL主从复制"><a href="#MySQL主从复制" class="headerlink" title="MySQL主从复制"></a>MySQL主从复制</h4><h5 id="MySQL-grant用户授权（先登录主服务器数据库进行用户授权）"><a href="#MySQL-grant用户授权（先登录主服务器数据库进行用户授权）" class="headerlink" title="MySQL grant用户授权（先登录主服务器数据库进行用户授权）"></a>MySQL grant用户授权（先登录主服务器数据库进行用户授权）</h5><p>在主服务器设置授权用户（授权所有权限关于所有数据库中所有表，给user这个用户从主机为192.168.10.2登录，密码为123456）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">//方法1：</div><div class="line">mysql&gt; grant all on *.* to user@192.168.10.2 identified by &apos;123456&apos;;</div><div class="line">//方法2：</div><div class="line">mysql&gt; grant replication slave on *.* to user@192.168.10.2 identified by &apos;123456&apos;;</div><div class="line"></div><div class="line">//查看用户授权表（即mysql数据库中的user表）</div><div class="line">mysql&gt; select user,host,password from mysql.user;</div></pre></td></tr></table></figure></p>
@@ -278,6 +299,10 @@
     
     </summary>
     
+      <category term="mysql" scheme="https://vonfly.github.io/categories/mysql/"/>
+    
+    
+      <category term="mysql" scheme="https://vonfly.github.io/tags/mysql/"/>
     
   </entry>
   
@@ -286,7 +311,7 @@
     <link href="https://vonfly.github.io/2017/03/16/mysql-partition/"/>
     <id>https://vonfly.github.io/2017/03/16/mysql-partition/</id>
     <published>2017-03-16T01:20:40.000Z</published>
-    <updated>2017-05-16T01:40:26.210Z</updated>
+    <updated>2017-05-18T02:15:24.657Z</updated>
     
     <content type="html"><![CDATA[<p>mysql-分区技术<br><a id="more"></a></p>
 <h2 id="MYSQL分区技术"><a href="#MYSQL分区技术" class="headerlink" title="MYSQL分区技术"></a>MYSQL分区技术</h2><p>MYSQL的分区技术与水平分表有点类似，但是它是在逻辑层进行的水平分表，对于应用程序而言它还是一张表。<br>MYSQL5.1有5种分区类型：<br>RANGE分区：基于属于一个给定连续区间的列值，把多行分配给分区<br>LIST分区：类似于RANGE分区，区别在于LIST分区是基于列值分配一个离散集合中的某个值来进行选择<br>HASH分区：。。。<br>KEY分区：。。。</p>
@@ -309,6 +334,10 @@
     
     </summary>
     
+      <category term="mysql" scheme="https://vonfly.github.io/categories/mysql/"/>
+    
+    
+      <category term="mysql" scheme="https://vonfly.github.io/tags/mysql/"/>
     
   </entry>
   
@@ -317,7 +346,7 @@
     <link href="https://vonfly.github.io/2017/03/13/mysql-optimize/"/>
     <id>https://vonfly.github.io/2017/03/13/mysql-optimize/</id>
     <published>2017-03-13T01:16:46.000Z</published>
-    <updated>2017-05-16T01:40:19.082Z</updated>
+    <updated>2017-05-18T02:15:21.154Z</updated>
     
     <content type="html"><![CDATA[<p>SQL语句技巧和优化<br><a id="more"></a></p>
 <h2 id="mysql-SQL语句技巧和优化"><a href="#mysql-SQL语句技巧和优化" class="headerlink" title="mysql SQL语句技巧和优化"></a>mysql SQL语句技巧和优化</h2><p>mysql5.5及之后版本默认存储引擎是innodb</p>
@@ -368,6 +397,10 @@
     
     </summary>
     
+      <category term="mysql" scheme="https://vonfly.github.io/categories/mysql/"/>
+    
+    
+      <category term="mysql" scheme="https://vonfly.github.io/tags/mysql/"/>
     
   </entry>
   
@@ -743,7 +776,7 @@
     <link href="https://vonfly.github.io/2016/09/06/linux-commands/"/>
     <id>https://vonfly.github.io/2016/09/06/linux-commands/</id>
     <published>2016-09-06T15:00:08.000Z</published>
-    <updated>2017-05-15T14:42:19.024Z</updated>
+    <updated>2017-05-18T02:11:45.588Z</updated>
     
     <content type="html"><![CDATA[<p>常用的一些Linux命令<br><a id="more"></a></p>
 <h2 id="目录操作"><a href="#目录操作" class="headerlink" title="目录操作"></a>目录操作</h2><h3 id="查看目录下的文件"><a href="#查看目录下的文件" class="headerlink" title="查看目录下的文件"></a>查看目录下的文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ls</div><div class="line">ls -l	//显示文件的详细信息(包括权限信息)</div><div class="line">ls -al	//显示文件的详细信息(包括隐藏文件)</div></pre></td></tr></table></figure>
@@ -822,10 +855,10 @@
 <h3 id="关闭指定进程号的进程"><a href="#关闭指定进程号的进程" class="headerlink" title="关闭指定进程号的进程"></a>关闭指定进程号的进程</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">kill -9 pid		//强制关闭</div><div class="line">kill -15 pid	//正常关闭</div></pre></td></tr></table></figure>
 <h3 id="查看内存使用"><a href="#查看内存使用" class="headerlink" title="查看内存使用"></a>查看内存使用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">free -m</div></pre></td></tr></table></figure>
 <h3 id="查看CPU使用"><a href="#查看CPU使用" class="headerlink" title="查看CPU使用"></a>查看CPU使用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">top</div></pre></td></tr></table></figure>
-<h3 id="实时跟踪一个命令的执行结果-如跟踪ls-lh命令"><a href="#实时跟踪一个命令的执行结果-如跟踪ls-lh命令" class="headerlink" title="实时跟踪一个命令的执行结果(如跟踪ls -lh命令)"></a>实时跟踪一个命令的执行结果(如跟踪ls -lh命令)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">watch -n1 ls -lh</div></pre></td></tr></table></figure>
 <h3 id="关机"><a href="#关机" class="headerlink" title="关机"></a>关机</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">shutdown -h now</div></pre></td></tr></table></figure>
 <h3 id="可以切换终端"><a href="#可以切换终端" class="headerlink" title="可以切换终端"></a>可以切换终端</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alt+f(1-6),共有6个终端</div></pre></td></tr></table></figure>
-]]></content>
+<h3 id="实时跟踪一个命令的执行结果-如跟踪ls-lh命令"><a href="#实时跟踪一个命令的执行结果-如跟踪ls-lh命令" class="headerlink" title="实时跟踪一个命令的执行结果(如跟踪ls -lh命令)"></a>实时跟踪一个命令的执行结果(如跟踪ls -lh命令)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">可以切换终端来查看具体效果</div><div class="line">watch -n1 ls -lh</div></pre></td></tr></table></figure>
+<h3 id="加压方式"><a href="#加压方式" class="headerlink" title="加压方式"></a>加压方式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">.tar.gz------------------&gt; tar zxvf 压缩包名.tar.gz</div><div class="line">.tar.bz2-----------------&gt; tar jxvf 压缩包名.tar.bz2</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -1049,9 +1082,9 @@
       <category term="命令" scheme="https://vonfly.github.io/categories/%E5%91%BD%E4%BB%A4/"/>
     
     
-      <category term="hexo" scheme="https://vonfly.github.io/tags/hexo/"/>
-    
       <category term="命令使用" scheme="https://vonfly.github.io/tags/%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8/"/>
+    
+      <category term="hexo" scheme="https://vonfly.github.io/tags/hexo/"/>
     
   </entry>
   
