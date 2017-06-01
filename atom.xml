@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vonfly.github.io/"/>
-  <updated>2017-06-01T13:29:49.717Z</updated>
+  <updated>2017-06-01T13:34:50.332Z</updated>
   <id>https://vonfly.github.io/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="https://vonfly.github.io/2017/06/01/yii-install/"/>
     <id>https://vonfly.github.io/2017/06/01/yii-install/</id>
     <published>2017-06-01T12:49:28.000Z</published>
-    <updated>2017-06-01T13:29:49.717Z</updated>
+    <updated>2017-06-01T13:34:50.332Z</updated>
     
-    <content type="html"><![CDATA[<p>通过 Composer 安装</p>
+    <content type="html"><![CDATA[<p>通过 Composer 安装<br><a id="more"></a></p>
 <h3 id="Packagist-Composer中国全量镜像"><a href="#Packagist-Composer中国全量镜像" class="headerlink" title="Packagist / Composer中国全量镜像"></a>Packagist / Composer中国全量镜像</h3><h4 id="先安装-Composer"><a href="#先安装-Composer" class="headerlink" title="先安装 Composer"></a>先安装 Composer</h4><p>安装前请务必确保已经正确安装了 PHP。打开命令行窗口并执行 php -v 查看是否正确输出版本号。<br>打开命令行并依次执行下列命令安装最新版本的 Composer：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php -r &quot;copy(&apos;https://install.phpcomposer.com/installer&apos;, &apos;composer-setup.php&apos;);&quot;</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php composer-setup.php</div></pre></td></tr></table></figure>
@@ -59,8 +59,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;通过 Composer 安装&lt;/p&gt;
-&lt;h3 id=&quot;Packagist-Composer中国全量镜像&quot;&gt;&lt;a href=&quot;#Packagist-Composer中国全量镜像&quot; class=&quot;headerlink&quot; title=&quot;Packagist / Composer中国
+      &lt;p&gt;通过 Composer 安装&lt;br&gt;
     
     </summary>
     
@@ -1136,9 +1135,9 @@
       <category term="命令" scheme="https://vonfly.github.io/categories/%E5%91%BD%E4%BB%A4/"/>
     
     
-      <category term="hexo" scheme="https://vonfly.github.io/tags/hexo/"/>
-    
       <category term="命令使用" scheme="https://vonfly.github.io/tags/%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8/"/>
+    
+      <category term="hexo" scheme="https://vonfly.github.io/tags/hexo/"/>
     
   </entry>
   
