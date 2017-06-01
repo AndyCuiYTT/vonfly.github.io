@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vonfly.github.io/"/>
-  <updated>2017-05-18T02:15:59.959Z</updated>
+  <updated>2017-06-01T13:29:49.717Z</updated>
   <id>https://vonfly.github.io/</id>
   
   <author>
@@ -14,6 +14,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>windows下安装yii</title>
+    <link href="https://vonfly.github.io/2017/06/01/yii-install/"/>
+    <id>https://vonfly.github.io/2017/06/01/yii-install/</id>
+    <published>2017-06-01T12:49:28.000Z</published>
+    <updated>2017-06-01T13:29:49.717Z</updated>
+    
+    <content type="html"><![CDATA[<p>通过 Composer 安装</p>
+<h3 id="Packagist-Composer中国全量镜像"><a href="#Packagist-Composer中国全量镜像" class="headerlink" title="Packagist / Composer中国全量镜像"></a>Packagist / Composer中国全量镜像</h3><h4 id="先安装-Composer"><a href="#先安装-Composer" class="headerlink" title="先安装 Composer"></a>先安装 Composer</h4><p>安装前请务必确保已经正确安装了 PHP。打开命令行窗口并执行 php -v 查看是否正确输出版本号。<br>打开命令行并依次执行下列命令安装最新版本的 Composer：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php -r &quot;copy(&apos;https://install.phpcomposer.com/installer&apos;, &apos;composer-setup.php&apos;);&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php composer-setup.php</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php -r &quot;unlink(&apos;composer-setup.php&apos;);&quot;</div></pre></td></tr></table></figure>
+<p>说明：<br>执行第一条命令下载下来的 composer-setup.php 脚本将简单地检测 php.ini 中的参数设置，如果某些参数未正确设置则会给出警告；然后下载最新版本的 composer.phar 文件到当前目录。</p>
+<p>上述 3 条命令的作用依次是：</p>
+<p>下载安装脚本 － composer-setup.php － 到当前目录。<br>执行安装过程。<br>删除安装脚本。</p>
+<h5 id="全局安装"><a href="#全局安装" class="headerlink" title="全局安装"></a>全局安装</h5><p>全局安装是将 Composer 安装到系统环境变量 PATH 所包含的路径下面，然后就能够在命令行窗口中直接执行 composer 命令了。</p>
+<h6 id="Mac-或-Linux-系统："><a href="#Mac-或-Linux-系统：" class="headerlink" title="Mac 或 Linux 系统："></a>Mac 或 Linux 系统：</h6><p>打开命令行窗口并执行如下命令将前面下载的 composer.phar 文件移动到 /usr/local/bin/ 目录下面：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"># sudo mv composer.phar /usr/local/bin/composer</div></pre></td></tr></table></figure>
+<h6 id="Windows-系统："><a href="#Windows-系统：" class="headerlink" title="Windows 系统："></a>Windows 系统：</h6><p>1、找到并进入 PHP 的安装目录（和你在命令行中执行的 php 指令应该是同一套 PHP）。<br>2、将 composer.phar 复制到 PHP 的安装目录下面，也就是和 php.exe 在同一级目录。<br>3、在 PHP 安装目录下新建一个 composer.bat 文件，并将下列代码保存到此文件中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@php &quot;%~dp0composer.phar&quot; %*</div></pre></td></tr></table></figure>
+<p>最后重新打开一个命令行窗口试一试执行 composer –version 看看是否正确输出版本号。<br>如图所示：<br><img src="http://olixffhc0.bkt.clouddn.com/yii-install1.PNG" alt="安装成功图片"></p>
+<p>提示：不要忘了经常执行 composer selfupdate 以保持 Composer 一直是最新版本哦！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">composer selfupdate		//命令行中执行</div></pre></td></tr></table></figure>
+<h4 id="Packagist-镜像使用方法"><a href="#Packagist-镜像使用方法" class="headerlink" title="Packagist 镜像使用方法"></a>Packagist 镜像使用方法</h4><p>系统全局配置： 即将配置信息添加到 Composer 的全局配置文件 config.json 中。见“方法一”<br>单个项目配置： 将配置信息添加到某个项目的 composer.json 文件中。见“方法二”</p>
+<h5 id="方法一：-修改-composer-的全局配置文件（推荐方式）"><a href="#方法一：-修改-composer-的全局配置文件（推荐方式）" class="headerlink" title="方法一： 修改 composer 的全局配置文件（推荐方式）"></a>方法一： 修改 composer 的全局配置文件（推荐方式）</h5><p>打开命令行窗口（windows用户）或控制台（Linux、Mac 用户）并执行如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">composer config -g repo.packagist composer https://packagist.phpcomposer.com</div></pre></td></tr></table></figure>
+<h5 id="方法二：-修改当前项目的-composer-json-配置文件："><a href="#方法二：-修改当前项目的-composer-json-配置文件：" class="headerlink" title="方法二： 修改当前项目的 composer.json 配置文件："></a>方法二： 修改当前项目的 composer.json 配置文件：</h5><p>打开命令行窗口（windows用户）或控制台（Linux、Mac 用户），进入你的项目的根目录（也就是 composer.json 文件所在目录），执行如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">composer config repo.packagist composer https://packagist.phpcomposer.com</div></pre></td></tr></table></figure>
+<p>上述命令将会在当前项目中的 composer.json 文件的末尾自动添加镜像的配置信息（你也可以自己手工添加）：<br>“repositories”: {<br>    “packagist”: {<br>        “type”: “composer”,<br>        “url”: “<a href="https://packagist.phpcomposer.com" target="_blank" rel="external">https://packagist.phpcomposer.com</a>“<br>    }<br>}</p>
+<h5 id="镜像原理："><a href="#镜像原理：" class="headerlink" title="镜像原理："></a>镜像原理：</h5><p>一般情况下，安装包的数据（主要是 zip 文件）一般是从 github.com 上下载的，安装包的元数据是从 packagist.org 上下载的。</p>
+<p>然而，由于众所周知的原因，国外的网站连接速度很慢，并且随时可能被“墙”甚至“不存在”。</p>
+<p>“Packagist 中国全量镜像”所做的就是缓存所有安装包和元数据到国内的机房并通过国内的 CDN 进行加速，这样就不必再去向国外的网站发起请求，从而达到加速 composer install 以及 composer update 的过程，并且更加快速、稳定。因此，即使 packagist.org、github.com 发生故障（主要是连接速度太慢和被墙），你仍然可以下载、更新安装包。</p>
+<h3 id="开始使用Composer-安装yii"><a href="#开始使用Composer-安装yii" class="headerlink" title="开始使用Composer 安装yii"></a>开始使用Composer 安装yii</h3><p>打开命令行，切换到一个可通过 Web 访问的目录（如我的是d:wamp/www），执行如下命令即可安装 Yii ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">composer global require &quot;fxp/composer-asset-plugin:^1.2.0&quot;</div><div class="line"></div><div class="line">composer create-project --prefer-dist yiisoft/yii2-app-basic yiishop</div></pre></td></tr></table></figure>
+<p>第一条命令安装 Composer asset plugin， 它是通过 Composer 管理 bower 和 npm 包所必须的，此命令全局生效，一劳永逸。 第二条命令会将 Yii 安装在名为 yiishop 的目录中。如果你想使用其它目录名称，你可以选择其他目录名称。</p>
+<p>注意: 在安装过程中 Composer 可能会询问你 GitHub 账户的认证信息，因为可能在使用中超过了 GitHub API （对匿名用户的）使用限制。因为 Composer 需要为所有扩展包从 GitHub 中获取大量信息，所以超限非常正常。（译注：也意味着作为程序猿没有 GitHub 账号，就真不能愉快地玩耍了）登陆 GitHub 之后可以得到更高的 API 限额，这样 Composer 才能正常运行。</p>
+<p>如下图所示：<br><img src="http://olixffhc0.bkt.clouddn.com/yii-install2.PNG" alt="需要github token"></p>
+<p>我们需要提供一个githtb token 供Composer检索使用<br>具体操作：<br>进入 <a href="https://github.com/settings/tokens" target="_blank" rel="external">https://github.com/settings/tokens</a> 点击 「Generate new token」 新建一个 Token，选择默认新建就行，然后就会得到一个 Token，然后输入这个值就 OK 了。</p>
+<p>最后等待就可以了，安装成功如下图：<br><img src="http://olixffhc0.bkt.clouddn.com/yii-install4.PNG" alt="安装yii成功"></p>
+<h3 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h3><p><a href="http://www.yiichina.com/doc/guide/2.0/start-installation#installing-via-composer" target="_blank" rel="external">yii中文社区</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;通过 Composer 安装&lt;/p&gt;
+&lt;h3 id=&quot;Packagist-Composer中国全量镜像&quot;&gt;&lt;a href=&quot;#Packagist-Composer中国全量镜像&quot; class=&quot;headerlink&quot; title=&quot;Packagist / Composer中国
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>memcache 内存缓存技术</title>
@@ -1084,9 +1136,9 @@
       <category term="命令" scheme="https://vonfly.github.io/categories/%E5%91%BD%E4%BB%A4/"/>
     
     
-      <category term="命令使用" scheme="https://vonfly.github.io/tags/%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8/"/>
-    
       <category term="hexo" scheme="https://vonfly.github.io/tags/hexo/"/>
+    
+      <category term="命令使用" scheme="https://vonfly.github.io/tags/%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8/"/>
     
   </entry>
   
@@ -1196,67 +1248,6 @@
     
     
       <category term="Markdown语法" scheme="https://vonfly.github.io/tags/Markdown%E8%AF%AD%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GitHub+Hexo+Next搭建免费独立个人博客</title>
-    <link href="https://vonfly.github.io/2016/01/22/hello-world/"/>
-    <id>https://vonfly.github.io/2016/01/22/hello-world/</id>
-    <published>2016-01-22T12:20:58.000Z</published>
-    <updated>2017-02-18T01:46:46.587Z</updated>
-    
-    <content type="html"><![CDATA[<p>我为什么要搭建个人博客呢，一来有自己的博客会显得高大尚一点，二来也可以当作学习新知识</p>
-<a id="more"></a>
-<h2 id="搭建步骤"><a href="#搭建步骤" class="headerlink" title="搭建步骤"></a>搭建步骤</h2><p>node.js Git 是必须工具</p>
-<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>前往<a href="https://git-scm.com/downloads" target="_blank" rel="external">Git官网</a>下载Windows版本压缩包，下载完成后解压安装。（一直下一步即可）</p>
-<p>当你安装Git后首先要做的事情是设置你的用户名称和e-mail地址。这是非常重要的，因为每次Git提交都会使用该信息。它被永远的嵌入到了你的提交中：在命令行中输入：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git config --global user.name <span class="string">"your username"</span></div><div class="line">$ git config --global user.email <span class="string">"your e-mail"</span></div></pre></td></tr></table></figure></p>
-<p>重申一遍，你只需要做一次这个设置。如果你传递了 –global 选项，因为Git将总是会使用该信息来处理你在系统中所做的一切操作。如果你希望在一个特定的项目中使用不同的名称或e-mail地址，你可以在该项目中运行该命令而不要–global选项。</p>
-<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>前往<a href="https://nodejs.org/en/download/" target="_blank" rel="external">Node.js官方</a>下载网站，选择适合自己系统的进行下载，下载完成后同样解压安装。（一直下一步即可）</p>
-<h3 id="注册Github账户"><a href="#注册Github账户" class="headerlink" title="注册Github账户"></a>注册Github账户</h3><p>前往Github网站，注册一个新用户。创建一个新的repository</p>
-<p>在自己的Github主页右上角的加号,创建一个新的repository。比如我的Github用户名为vonfly，那么我创建的repository的名字应该是 vonfly.github.io</p>
-<h3 id="给本机配置SSH-Key"><a href="#给本机配置SSH-Key" class="headerlink" title="给本机配置SSH-Key"></a>给本机配置SSH-Key</h3><p>打开Git Bash，在命令行中输入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C <span class="string">"your e-mail"</span></div></pre></td></tr></table></figure>
-<p>之后一直回车，就可以了<br>成功之后在命令行中找到这两段<br>Your identification has been saved in /c/Users/XZY-06/.ssh/id_rsa.<br>Your public key has been saved in /c/Users/XZY-06/.ssh/id_rsa.pub.<br>打开所对应的文件夹，找到 id_rsa.pub文件，用编辑器打开，复制其中的全部内容。<br>登陆你的GitHub账户，依次点击账号Settings &gt; SSH and GPG keys &gt; new SSH key，把id_rsa.<br>pub中的内容拷贝进去key项，title项随意填 。</p>
-<p>至此就已经配置完SSH-Key了</p>
-<h3 id="安装Hexo（安装需要花一些时间）"><a href="#安装Hexo（安装需要花一些时间）" class="headerlink" title="安装Hexo（安装需要花一些时间）"></a>安装Hexo（安装需要花一些时间）</h3><p>点击鼠标右键，看是否有Git bash Here选项。如果没有可以前往Git安装根目录，启动git-base.exe也可以。在命令行中输入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure>
-<h3 id="创建myblog文件夹"><a href="#创建myblog文件夹" class="headerlink" title="创建myblog文件夹"></a>创建myblog文件夹</h3><p>找到想要放置博客的文件夹，比如（F:\myblog），在该目录下鼠标右击打开Gitbash工具。在命令行中输入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init</div></pre></td></tr></table></figure>
-<p>这里init后面可以跟文件目录，比如我想在F:\text下创建博客文件夹，那么可以用下面的命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init F:\text</div></pre></td></tr></table></figure>
-<h3 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h3><p>在myblog目录下，执行以下命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install</div></pre></td></tr></table></figure>
-<h3 id="安装完后的目录结构"><a href="#安装完后的目录结构" class="headerlink" title="安装完后的目录结构"></a>安装完后的目录结构</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">├── _config.yml //网站的配置信息（也就是站点配置文件）</div><div class="line">├── package.json //应用程序数据，指明hexo的版本等信息</div><div class="line">├── scaffolds //模版文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。</div><div class="line">├── <span class="built_in">source</span> //文章源码目录，该目录下的markdown和html文件均会被hexo处理。</div><div class="line">| ├── _posts  //新建的文章都将存放在此目录下。编辑&lt;文件名&gt;.md文件可修改内容。</div><div class="line">└── themes //主题文件夹。Hexo会根据主题来生成静态页面。</div></pre></td></tr></table></figure>
-<h3 id="本地调试（在myblog目录下，依次执行以下命令）"><a href="#本地调试（在myblog目录下，依次执行以下命令）" class="headerlink" title="本地调试（在myblog目录下，依次执行以下命令）"></a>本地调试（在myblog目录下，依次执行以下命令）</h3><h4 id="1-生成网站"><a href="#1-生成网站" class="headerlink" title="1.生成网站"></a>1.生成网站</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<h4 id="2-本地服务器"><a href="#2-本地服务器" class="headerlink" title="2.本地服务器"></a>2.本地服务器</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>然后在浏览器中输入 localhost:4000 就可以看到自己的博客了<br>如果打开很慢或者打开不了，可以更改下端口<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server -p 3000</div></pre></td></tr></table></figure></p>
-<p>重新在浏览器中输入 localhost:3000即可，至此我们已经搭建好自己的Hexo博客了，不过博客采用的主题是默认的主题，而我们要使用简洁优雅且易于使用NexT主题</p>
-<h3 id="Next主题"><a href="#Next主题" class="headerlink" title="Next主题"></a>Next主题</h3><h4 id="1-下载Next主题（下载需要一点时间）"><a href="#1-下载Next主题（下载需要一点时间）" class="headerlink" title="1.下载Next主题（下载需要一点时间）"></a>1.下载Next主题（下载需要一点时间）</h4><p>在myblog目录下，执行以下命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
-<h4 id="2-启用Next主题"><a href="#2-启用Next主题" class="headerlink" title="2.启用Next主题"></a>2.启用Next主题</h4><p>下载完成后，打开站点配置文件(即更目录下的_config.yml)，找到theme字段，并将其值更改为 next。<br>再重新执行本地调试那一步骤的命令查看效果即可</p>
-<h3 id="将本地的文件部署（上传）到Github账户中"><a href="#将本地的文件部署（上传）到Github账户中" class="headerlink" title="将本地的文件部署（上传）到Github账户中"></a>将本地的文件部署（上传）到Github账户中</h3><p>打开站点配置文件(即更目录下的_config.yml)，在最后添加如下代码（在你修改时，把 repository更换成之前步骤创建新的repository仓库地址）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repository: https://github.com/vonfly/vonfly.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
-<p>执行以下指令即可完成部署（如果提示错误，可以看下面出错原因及解决方法）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>1.每次修改本地文件，都需要命令$ hexo generate才能保存。而且每次使用命令都必须在myblog根目录下使用。</p>
-<p>2.如果你在执行$ hexo deloy,如果提示 ERROR Deployer not found: git，<br>那说明你没有安装hexo-deployer-git依赖包，进入F:\Hexo\node_modules发现真的没有hexo-deployer-git。<br>解决方法：<br>①只需要输入下面命令创建hexo-deployer-git依赖包</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
-<p>　<br>②然后再执行hexo deploy就能上传成功了<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure></p>
-<p>直接在浏览器访问vonfly.github.io试试</p>
-<p>博客安装和主题配置参考：<br><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">hexo官网</a><br><a href="http://theme-next.iissnan.com/getting-started.html#top" target="_blank" rel="external">next主题官网</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;我为什么要搭建个人博客呢，一来有自己的博客会显得高大尚一点，二来也可以当作学习新知识&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="其它" scheme="https://vonfly.github.io/categories/%E5%85%B6%E5%AE%83/"/>
-    
-    
-      <category term="hexo" scheme="https://vonfly.github.io/tags/hexo/"/>
     
   </entry>
   
